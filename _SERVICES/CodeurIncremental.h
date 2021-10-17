@@ -1,4 +1,6 @@
 #include "stm32f103xb.h"
+#include "MyGPIO.h"
+#include "MyTimer.h"
 
 //Fonction qui récupère l'angle donné par le codeur incrémental
 int recup_angle(TIM_TypeDef * timer);
