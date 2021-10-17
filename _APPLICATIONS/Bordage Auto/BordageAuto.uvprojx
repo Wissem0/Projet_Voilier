@@ -391,6 +391,48 @@
         </Group>
         <Group>
           <GroupName>MesDrivers</GroupName>
+          <Files>
+            <File>
+              <FileName>ADC.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\_DRIVERS\ADC.h</FilePath>
+            </File>
+            <File>
+              <FileName>MyGPIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\_DRIVERS\MyGPIO.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyGPIO.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\_DRIVERS\MyGPIO.h</FilePath>
+            </File>
+            <File>
+              <FileName>MyTimer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\_DRIVERS\MyTimer.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyTimer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\_DRIVERS\MyTimer.h</FilePath>
+            </File>
+            <File>
+              <FileName>UART.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\_DRIVERS\UART.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>MesServices</GroupName>
+          <Files>
+            <File>
+              <FileName>CodeurIncremental.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\_SERVICES\CodeurIncremental.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>
@@ -732,7 +774,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\DRIVERS</IncludePath>
+              <IncludePath>..\..\_DRIVERS</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -785,6 +827,48 @@
         </Group>
         <Group>
           <GroupName>MesDrivers</GroupName>
+          <Files>
+            <File>
+              <FileName>ADC.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\_DRIVERS\ADC.h</FilePath>
+            </File>
+            <File>
+              <FileName>MyGPIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\_DRIVERS\MyGPIO.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyGPIO.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\_DRIVERS\MyGPIO.h</FilePath>
+            </File>
+            <File>
+              <FileName>MyTimer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\_DRIVERS\MyTimer.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyTimer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\_DRIVERS\MyTimer.h</FilePath>
+            </File>
+            <File>
+              <FileName>UART.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\_DRIVERS\UART.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>MesServices</GroupName>
+          <Files>
+            <File>
+              <FileName>CodeurIncremental.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\_SERVICES\CodeurIncremental.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>

@@ -1,4 +1,4 @@
-#include "stm32f103xb.h"
+#include "stm32f10x.h"
 #include "MyGPIO.h"
 #include "MyTimer.h"
 
@@ -6,7 +6,7 @@
 int recup_angle(TIM_TypeDef * timer);
 
 //Fonction qui récupère la direction du mouvement de la girouette
-boolean recup_direction(TIM_TypeDef * timer);
+int recup_direction(TIM_TypeDef * timer);
 
 //Fonction de configuration initiale du codeur incrémental
 //Il faut configurer le timer du codeur et les GPIO associés
