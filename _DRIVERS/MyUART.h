@@ -12,7 +12,7 @@ typedef struct
 
 //Configure l'UART
 void MyUART_Init ( MyUART_Struct_TypeDef * UART ) ;
-//Envoie le message donné par l'UART
+//Envoie le message 
 void MyUART_Send ( USART_TypeDef * UART, char* String);
 
 
