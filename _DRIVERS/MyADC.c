@@ -1,12 +1,7 @@
 #include "MyADC.h"
 
 
-typedef struct
-{
-	ADC_TypeDef * ADC ;
-	/*  ...  */
 
-} MyADC_Struct_TypeDef ;
 
 
 void MyADC_Init ( MyADC_Struct_TypeDef * ADC ) 
