@@ -7,9 +7,8 @@ void (* IT_function_TIM2) (void) ;
 void (* IT_function_TIM3) (void) ; 
 void (* IT_function_TIM4) (void) ; 
 
-void MyTimer_Base_Init(MyTimer_Struct_TypeDef * Timer) {
-	Timer -> Timer -> ARR = Timer -> ARR ;
-	Timer -> Timer -> PSC = Timer -> PSC ;
+void MyTimer_Base_Init(MyTimer_Struct_TypeDef * Timer, int ARR, int PSC) {
+	
 
 	if (Timer ->Timer == TIM1 ) {
 		RCC-> APB2ENR |= 0x01 << 11 ;
@@ -19,6 +18,8 @@ void MyTimer_Base_Init(MyTimer_Struct_TypeDef * Timer) {
 		RCC-> APB1ENR |= 0x01 << 1;
 	} else if (Timer ->Timer == TIM4) {
 		RCC-> APB1ENR |= 0x01 << 2;}	
+	Timer->PSC = PSC;
+	Timer->ARR = ARR;
 }
 
 void Activate_TIM(int i) {
@@ -140,6 +141,19 @@ void MyTimer_PWM_Cycle(TIM_TypeDef * Timer, float percent, char channel)  {
 			break ;
 	}
 }
+
+
+void Mytimer_codeur_recup_angle(MyTimer_Struct_TypeDef * timer){
+    //La configuration du timer du codeur nécessite le renseignement du ARR et PSC
+    //Le codeur compte 360 degrés * 2 car il compte deux tours
+    //On prend donc un ARR de 720
+    MyTimer_Base_Init(timer,719,0);
+    timer->Timer->SMCR&= TIM_SMCR_SMS;
+    timer->Timer->SMCR|=TIM_SMCR_SMS_0;
+
+
+}
+
 
 
 // 
