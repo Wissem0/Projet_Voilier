@@ -10,7 +10,7 @@ typedef struct {
 
 #define In_Floating 0x4
 #define In_PullDown 0x8
-#define In_PullUp 0x9 // on le d�finit nous m�me 
+#define In_PullUp 0x9 // on le définit nous même 
 #define In_Analog 0x0
 #define Out_Ppull 0x2
 #define Out_OD 0x6
