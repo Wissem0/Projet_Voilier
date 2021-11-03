@@ -134,12 +134,12 @@ void MyTimer_PWM_Cycle(TIM_TypeDef * Timer, float percent, char channel)  {
 
 void MyTimer_timer_encodeur_init(TIM_TypeDef * Timer_encodeur){
 	//Configuration du timer encodeur
-	//Counting on TI1 edges only: SMS=010
-	Timer_encodeur->SMCR &=~(0x7);
-	Timer_encodeur->SMCR |= (0x1<<1);
+	//Counting on TI1 edges and TI2 edges: SMS=110
+	Timer_encodeur->SMCR &=~0x7;
+	Timer_encodeur->SMCR |= 0x3;
     	//CC1S=01
 	Timer_encodeur->CCMR1 &= ~(0x2);
-	Timer_encodeur->CCMR1 |= (0x1);
+	Timer_encodeur->CCMR1 |= 0x1;
 	//CC2S=01
 	Timer_encodeur->CCMR1 &= ~(0x2<<8);
 	Timer_encodeur->CCMR1 |= (0x1<<8);
