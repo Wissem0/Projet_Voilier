@@ -133,11 +133,11 @@
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <DriverSelection>-1</DriverSelection>
+            <DriverSelection>4096</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>..\..\_DRIVERS</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -356,7 +356,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\_DRIVERS;..\..\_SERVICES</IncludePath>
+              <IncludePath>..\..\_DRIVERS</IncludePath>
             </VariousControls>
           </Aads>
           <LDads>
@@ -381,9 +381,88 @@
       <Groups>
         <Group>
           <GroupName>MesSources</GroupName>
+          <Files>
+            <File>
+              <FileName>MyADC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\_DRIVERS\MyADC.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyGPIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\_DRIVERS\MyGPIO.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyTimer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\_DRIVERS\MyTimer.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyUART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\_DRIVERS\MyUART.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>MesDrivers</GroupName>
+          <Files>
+            <File>
+              <FileName>MyADC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\_DRIVERS\MyADC.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyADC.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\_DRIVERS\MyADC.h</FilePath>
+            </File>
+            <File>
+              <FileName>MyGPIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\_DRIVERS\MyGPIO.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyGPIO.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\_DRIVERS\MyGPIO.h</FilePath>
+            </File>
+            <File>
+              <FileName>MyTimer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\_DRIVERS\MyTimer.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyTimer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\_DRIVERS\MyTimer.h</FilePath>
+            </File>
+            <File>
+              <FileName>MyUART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\_DRIVERS\MyUART.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyUART.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\_DRIVERS\MyUART.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>MesServices</GroupName>
+          <Files>
+            <File>
+              <FileName>GestionGirouette.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\_SERVICES\GestionGirouette.c</FilePath>
+            </File>
+            <File>
+              <FileName>GestionGirouette.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\_SERVICES\GestionGirouette.h</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>
