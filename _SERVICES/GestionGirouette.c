@@ -23,7 +23,14 @@ timer_encodeur->Timer->CNT=0;
 }
 }
 
-int Girouette_recup_direction(TIM_TypeDef * timer){
+void init_girouette (MyTimer_Struct_TypeDef *Timer_encodeur, MyTimer_Struct_TypeDef *Timer_moteur, MyGPIO_Struct_TypeDef * GPIO){
 
-};
+	MyGPIO_Init(GPIO);
+	MyTimer_Base_Init (Timer_encodeur,719,0);
+	MyTimer_Base_Init (Timer_moteur,277,0); //timer à 20ms de période
+	MyTimer_PWM(Timer_moteur->Timer,1); 
+	MyTimer_PWM_Cycle(Timer_moteur->Timer,100,1);
+	MyTimer_timer_encodeur_init(Timer_encodeur->Timer);
+	//à compléter
+}
 

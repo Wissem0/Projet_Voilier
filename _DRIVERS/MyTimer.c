@@ -22,17 +22,6 @@ void MyTimer_Base_Init(MyTimer_Struct_TypeDef * Timer, int ARR, int PSC) {
 	Timer->ARR = ARR;
 }
 
-void Activate_TIM(int i) {
-	if (i==1) {
-		//le timer1 est sur apb2enr
-		RCC-> APB2ENR |= 0x01 << 11 ;
-	}
-	else {
-		//les autres timers sont sur apb1enr
-		RCC-> APB1ENR |= 0x01 << (i-2) ;
-	}
-}
-
 void MyTimer_Active_IT ( TIM_TypeDef * Timer , char Prio, void (*IT_function)(void) ) {
 	//active l'interruption sur timer avec la priorité prio
 	
@@ -143,13 +132,20 @@ void MyTimer_PWM_Cycle(TIM_TypeDef * Timer, float percent, char channel)  {
 }
 
 
-void Mytimer_codeur_recup_angle(MyTimer_Struct_TypeDef * timer){
-    //La configuration du timer du codeur nécessite le renseignement du ARR et PSC
-    //Le codeur compte 360 degrés * 2 car il compte deux tours
-    //On prend donc un ARR de 720
-    MyTimer_Base_Init(timer,719,0);
-    timer->Timer->SMCR&= TIM_SMCR_SMS;
-    timer->Timer->SMCR|=TIM_SMCR_SMS_0;
+void MyTimer_timer_encodeur_init(TIM_TypeDef * Timer_encodeur){
+	//Configuration du timer encodeur
+	//Counting on TI1 edges and TI2 edges: SMS=110
+	Timer_encodeur->SMCR &=~0x7;
+	Timer_encodeur->SMCR |= 0x3;
+    	//CC1S=01
+	Timer_encodeur->CCMR1 &= ~(0x2);
+	Timer_encodeur->CCMR1 |= 0x1;
+	//CC2S=01
+	Timer_encodeur->CCMR1 &= ~(0x2<<8);
+	Timer_encodeur->CCMR1 |= (0x1<<8);
+	//CEN=1
+	//Initialisation
+	MyTimer_Base_Start(Timer_encodeur); //fait la même chose
 
 
 }
