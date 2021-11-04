@@ -3,8 +3,8 @@
  * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'BordageAuto' 
- * Target:  'Réel' 
+ * Project: 'Girouette _test' 
+ * Target:  'Simulé' 
  */
 
 #ifndef RTE_COMPONENTS_H
