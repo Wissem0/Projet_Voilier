@@ -5,19 +5,19 @@
 void MyADC_Init ( ADC_TypeDef * ADC , int channel) 
 {
 	if (ADC == ADC1) {
-	      	RCC->APB2ENR |= RCC_APB2ENR_ADC1EN;
+	    RCC->APB2ENR |= RCC_APB2ENR_ADC1EN;
 			
 	} else if (ADC == ADC2) {
-		//RCC->APB2ENR |= RCC_APB2ENR_ADC1EN;
+		RCC->APB2ENR |= RCC_APB2ENR_ADC2EN ; 
 	}
 
 	// Division de la frequence
 	RCC->CFGR |= RCC_CFGR_ADCPRE_DIV6;
 
-	// Fixe le nombre de conversion � 1
+	// Fixe le nombre de conversion à 1
 	ADC->SQR1 &= ADC_SQR1_L;
 	ADC->SQR3|= channel;
-	ADC->CR2 |= ADC_CR2_CAL; // d�but de la calibration
+	ADC->CR2 |= ADC_CR2_CAL; // début de la calibration
 	while ((ADC->CR2 & ADC_CR2_CAL));
 }
 
