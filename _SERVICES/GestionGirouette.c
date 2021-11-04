@@ -2,35 +2,44 @@
 #include "MyTimer.h"
 #include "GestionGirouette.h"
 
-//Fonction qui récupère l'angle donné par le codeur incrémental
-int Girouette_recup_angle(TIM_TypeDef * timer){
-	int angle_alpha=timer->CNT; //on récupère ce qu'il y a dans CNT
-	if (angle_alpha>180) angle_alpha=angle_alpha-180;
+	//Fonction interruption appelée chaque 20ms pour récupérer l'angle de la Girouette
+	//TIM2 pour Timer encodeur et TIM3 pour Timer moteur
+void Girouette_recup_angle(void){
+	
+	int angle_alpha=(TIM2->CNT/2.0); //on récupère ce qu'il y a dans CNT
 	int angle_teta = 0;
-	if (angle_alpha > 45){
-		angle_teta = (float)(angle_alpha-30.0)/90*(2.0/3.0); //formule à revoir
+	if (angle_alpha>0 || angle_alpha<45) {angle_teta = 0;}
+	if (angle_alpha>45 || angle_alpha<180){
+		angle_teta=(angle_alpha-45)*(90.0/135.0);
 	}
-//On donne la main à un autre timer
+	//Position du moteur selon l'angle
+	MyTimer_PWM_Cycle(TIM3,(angle_teta*10./9.0),2);
+	}
 
-}
 
-void Girouette_init_girouette(MyTimer_Struct_TypeDef * timer_encodeur,GPIO_TypeDef * GPIO){
-MyTimer_Base_Init(timer_encodeur, 719, 0);
-Mytimer_codeur_recup_angle(timer_encodeur); //configure le timer de l'encodeur
-
-while (GPIO->IDR==0){ //s'il n'y a rien on ne compte rien
-timer_encodeur->Timer->CNT=0;
-}
-}
-
-void init_girouette (MyTimer_Struct_TypeDef *Timer_encodeur, MyTimer_Struct_TypeDef *Timer_moteur, MyGPIO_Struct_TypeDef * GPIO){
-
-	MyGPIO_Init(GPIO);
-	MyTimer_Base_Init (Timer_encodeur,719,0);
-	MyTimer_Base_Init (Timer_moteur,277,0); //timer à 20ms de période
-	MyTimer_PWM(Timer_moteur->Timer,1); 
-	MyTimer_PWM_Cycle(Timer_moteur->Timer,100,1);
+void init_girouette (MyTimer_Struct_TypeDef *Timer_encodeur, MyTimer_Struct_TypeDef *Timer_moteur,
+MyGPIO_Struct_TypeDef * GPIO_Girouette,MyGPIO_Struct_TypeDef * GPIO_Moteur, MyTimer_Struct_TypeDef *Timer_interruption){
+	
+	MyTimer_Base_Init(Timer_encodeur,Timer_encodeur->ARR,Timer_encodeur->PSC);
 	MyTimer_timer_encodeur_init(Timer_encodeur->Timer);
-	//à compléter
+
+	//Init
+	MyGPIO_Init(GPIO_Girouette);
+	//On attend qu'il y ait un input au niveau du GPIO
+	while(!MyGPIO_Read(GPIO_Girouette->GPIO,GPIO_Girouette->GPIO_Pin)){}
+	MyTimer_Base_Start(Timer_encodeur->Timer);
+
+
+	//PWM
+	MyTimer_Base_Init (Timer_moteur,Timer_moteur->ARR,Timer_moteur->PSC);
+	MyTimer_PWM(Timer_moteur->Timer,2);
+	MyGPIO_Init(GPIO_Moteur);
+	MyTimer_Base_Start(Timer_moteur->Timer);
+	
+
+	//Interruption
+	MyTimer_Base_Init(Timer_interruption,Timer_interruption->ARR,Timer_interruption->PSC);
+	MyTimer_Active_IT(Timer_interruption->Timer,3,Girouette_recup_angle);
+	MyTimer_Base_Start(Timer_interruption->Timer);
 }
 
