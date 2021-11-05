@@ -4,7 +4,7 @@
 
 
 
-//Envoie le message 
+//Envoie le message ---------
 void MyUART_Send (char String);
 
 //Reçoit le message
