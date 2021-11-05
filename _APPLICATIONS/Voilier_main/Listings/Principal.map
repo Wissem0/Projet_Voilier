@@ -1,0 +1,118 @@
+Component: ARM Compiler 5.06 update 7 (build 960) Tool: armlink [4d3601]
+
+==============================================================================
+
+Section Cross References
+
+    mygpio.o(i.MyGPIO_Init) refers to mygpio.o(i.MyGPIO_Set) for MyGPIO_Set
+    mygpio.o(i.MyGPIO_Init) refers to mygpio_1.o(i.MyGPIO_Set) for MyGPIO_Set
+    mygpio.o(i.MyGPIO_Toggle) refers to mygpio.o(i.MyGPIO_Reset) for MyGPIO_Reset
+    mygpio.o(i.MyGPIO_Toggle) refers to mygpio_1.o(i.MyGPIO_Reset) for MyGPIO_Reset
+    mygpio.o(i.MyGPIO_Toggle) refers to mygpio.o(i.MyGPIO_Set) for MyGPIO_Set
+    mygpio.o(i.MyGPIO_Toggle) refers to mygpio_1.o(i.MyGPIO_Set) for MyGPIO_Set
+    mytimer.o(i.MyTimer_Active_IT) refers to mytimer.o(i.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
+    mytimer.o(i.MyTimer_Active_IT) refers to mytimer.o(i.__NVIC_SetPriority) for __NVIC_SetPriority
+    mytimer.o(i.MyTimer_Active_IT) refers to mytimer.o(.data) for IT_function_TIM1
+    mytimer.o(i.MyTimer_Active_IT) refers to mytimer_1.o(.data) for IT_function_TIM1
+    mytimer.o(i.MyTimer_PWM_Cycle) refers to f2d.o(.text) for __aeabi_f2d
+    mytimer.o(i.MyTimer_PWM_Cycle) refers to ddiv.o(.text) for __aeabi_ddiv
+    mytimer.o(i.MyTimer_PWM_Cycle) refers to ffltui.o(.text) for __aeabi_ui2f
+    mytimer.o(i.MyTimer_PWM_Cycle) refers to dmul.o(.text) for __aeabi_dmul
+    mytimer.o(i.MyTimer_PWM_Cycle) refers to dfixi.o(.text) for __aeabi_d2iz
+    mytimer.o(i.TIM1_IRQHandler) refers to mytimer.o(.data) for IT_function_TIM1
+    mytimer.o(i.TIM1_IRQHandler) refers to mytimer_1.o(.data) for IT_function_TIM1
+    mytimer.o(i.TIM2_IRQHandler) refers to mytimer.o(.data) for IT_function_TIM2
+    mytimer.o(i.TIM2_IRQHandler) refers to mytimer_1.o(.data) for IT_function_TIM2
+    mytimer.o(i.TIM3_IRQHandler) refers to mytimer.o(.data) for IT_function_TIM3
+    mytimer.o(i.TIM3_IRQHandler) refers to mytimer_1.o(.data) for IT_function_TIM3
+    mytimer.o(i.TIM4_IRQHandler) refers to mytimer.o(.data) for IT_function_TIM4
+    mytimer.o(i.TIM4_IRQHandler) refers to mytimer_1.o(.data) for IT_function_TIM4
+    mygpio_1.o(i.MyGPIO_Init) refers to mygpio.o(i.MyGPIO_Set) for MyGPIO_Set
+    mygpio_1.o(i.MyGPIO_Init) refers to mygpio_1.o(i.MyGPIO_Set) for MyGPIO_Set
+    mygpio_1.o(i.MyGPIO_Toggle) refers to mygpio.o(i.MyGPIO_Reset) for MyGPIO_Reset
+    mygpio_1.o(i.MyGPIO_Toggle) refers to mygpio_1.o(i.MyGPIO_Reset) for MyGPIO_Reset
+    mygpio_1.o(i.MyGPIO_Toggle) refers to mygpio.o(i.MyGPIO_Set) for MyGPIO_Set
+    mygpio_1.o(i.MyGPIO_Toggle) refers to mygpio_1.o(i.MyGPIO_Set) for MyGPIO_Set
+    mytimer_1.o(i.MyTimer_Active_IT) refers to mytimer_1.o(i.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
+    mytimer_1.o(i.MyTimer_Active_IT) refers to mytimer_1.o(i.__NVIC_SetPriority) for __NVIC_SetPriority
+    mytimer_1.o(i.MyTimer_Active_IT) refers to mytimer.o(.data) for IT_function_TIM1
+    mytimer_1.o(i.MyTimer_Active_IT) refers to mytimer_1.o(.data) for IT_function_TIM1
+    mytimer_1.o(i.MyTimer_PWM_Cycle) refers to f2d.o(.text) for __aeabi_f2d
+    mytimer_1.o(i.MyTimer_PWM_Cycle) refers to ddiv.o(.text) for __aeabi_ddiv
+    mytimer_1.o(i.MyTimer_PWM_Cycle) refers to ffltui.o(.text) for __aeabi_ui2f
+    mytimer_1.o(i.MyTimer_PWM_Cycle) refers to dmul.o(.text) for __aeabi_dmul
+    mytimer_1.o(i.MyTimer_PWM_Cycle) refers to dfixi.o(.text) for __aeabi_d2iz
+    mytimer_1.o(i.TIM1_IRQHandler) refers to mytimer.o(.data) for IT_function_TIM1
+    mytimer_1.o(i.TIM1_IRQHandler) refers to mytimer_1.o(.data) for IT_function_TIM1
+    mytimer_1.o(i.TIM2_IRQHandler) refers to mytimer.o(.data) for IT_function_TIM2
+    mytimer_1.o(i.TIM2_IRQHandler) refers to mytimer_1.o(.data) for IT_function_TIM2
+    mytimer_1.o(i.TIM3_IRQHandler) refers to mytimer.o(.data) for IT_function_TIM3
+    mytimer_1.o(i.TIM3_IRQHandler) refers to mytimer_1.o(.data) for IT_function_TIM3
+    mytimer_1.o(i.TIM4_IRQHandler) refers to mytimer.o(.data) for IT_function_TIM4
+    mytimer_1.o(i.TIM4_IRQHandler) refers to mytimer_1.o(.data) for IT_function_TIM4
+    gestiongirouette.o(i.Girouette_recup_angle) refers to dfltui.o(.text) for __aeabi_ui2d
+    gestiongirouette.o(i.Girouette_recup_angle) refers to ddiv.o(.text) for __aeabi_ddiv
+    gestiongirouette.o(i.Girouette_recup_angle) refers to dfixi.o(.text) for __aeabi_d2iz
+    gestiongirouette.o(i.Girouette_recup_angle) refers to dflti.o(.text) for __aeabi_i2d
+    gestiongirouette.o(i.Girouette_recup_angle) refers to dmul.o(.text) for __aeabi_dmul
+    gestiongirouette.o(i.Girouette_recup_angle) refers to d2f.o(.text) for __aeabi_d2f
+    gestiongirouette.o(i.Girouette_recup_angle) refers to mytimer.o(i.MyTimer_PWM_Cycle) for MyTimer_PWM_Cycle
+    gestiongirouette.o(i.Girouette_recup_angle) refers to mytimer_1.o(i.MyTimer_PWM_Cycle) for MyTimer_PWM_Cycle
+    gestiongirouette.o(i.init_girouette) refers to mytimer.o(i.MyTimer_Base_Init) for MyTimer_Base_Init
+    gestiongirouette.o(i.init_girouette) refers to mytimer_1.o(i.MyTimer_Base_Init) for MyTimer_Base_Init
+    gestiongirouette.o(i.init_girouette) refers to mytimer.o(i.MyTimer_timer_encodeur_init) for MyTimer_timer_encodeur_init
+    gestiongirouette.o(i.init_girouette) refers to mytimer_1.o(i.MyTimer_timer_encodeur_init) for MyTimer_timer_encodeur_init
+    gestiongirouette.o(i.init_girouette) refers to mygpio.o(i.MyGPIO_Init) for MyGPIO_Init
+    gestiongirouette.o(i.init_girouette) refers to mygpio_1.o(i.MyGPIO_Init) for MyGPIO_Init
+    gestiongirouette.o(i.init_girouette) refers to mygpio.o(i.MyGPIO_Read) for MyGPIO_Read
+    gestiongirouette.o(i.init_girouette) refers to mygpio_1.o(i.MyGPIO_Read) for MyGPIO_Read
+    gestiongirouette.o(i.init_girouette) refers to mytimer.o(i.MyTimer_PWM) for MyTimer_PWM
+    gestiongirouette.o(i.init_girouette) refers to mytimer_1.o(i.MyTimer_PWM) for MyTimer_PWM
+    gestiongirouette.o(i.init_girouette) refers to mytimer.o(i.MyTimer_Active_IT) for MyTimer_Active_IT
+    gestiongirouette.o(i.init_girouette) refers to mytimer_1.o(i.MyTimer_Active_IT) for MyTimer_Active_IT
+    gestiongirouette.o(i.init_girouette) refers to gestiongirouette.o(i.Girouette_recup_angle) for Girouette_recup_angle
+    startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
+    startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(.text) for Reset_Handler
+    startup_stm32f10x_md.o(RESET) refers to mytimer.o(i.TIM2_IRQHandler) for TIM2_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to mytimer_1.o(i.TIM2_IRQHandler) for TIM2_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to mytimer.o(i.TIM3_IRQHandler) for TIM3_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to mytimer_1.o(i.TIM3_IRQHandler) for TIM3_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to mytimer.o(i.TIM4_IRQHandler) for TIM4_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to mytimer_1.o(i.TIM4_IRQHandler) for TIM4_IRQHandler
+    startup_stm32f10x_md.o(.text) refers to system_stm32f10x.o(i.SystemInit) for SystemInit
+    startup_stm32f10x_md.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    system_stm32f10x.o(i.SetSysClock) refers to system_stm32f10x.o(i.SetSysClockTo72) for SetSysClockTo72
+    system_stm32f10x.o(i.SystemCoreClockUpdate) refers to system_stm32f10x.o(.data) for SystemCoreClock
+    system_stm32f10x.o(i.SystemInit) refers to system_stm32f10x.o(i.SetSysClock) for SetSysClock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000F) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$00000011) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry12b.o(.ARM.Collect$$$$0000000E) for __rt_lib_shutdown_fini
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    dmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    ddiv.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    ffltui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ffltui.o(.text) refers to fepilogue.o(.text) for _float_epilogue
+    dflti.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dflti.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dfltui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfltui.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dfixi.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixi.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    f2d.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    d2f.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    d2f.o(.text) refers to fepilogue.o(.text) for _float_round
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+

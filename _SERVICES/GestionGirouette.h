@@ -3,5 +3,6 @@
 #include "MyTimer.h"
 
 void Girouette_recup_angle();
-void Girouette_init_girouette(MyTimer_Struct_TypeDef * timer_encodeur,GPIO_TypeDef * GPIO);
+void init_girouette (MyTimer_Struct_TypeDef *Timer_encodeur, MyTimer_Struct_TypeDef *Timer_moteur,
+MyGPIO_Struct_TypeDef * GPIO_Girouette,MyGPIO_Struct_TypeDef * GPIO_Moteur, MyTimer_Struct_TypeDef *Timer_interruption);
 
