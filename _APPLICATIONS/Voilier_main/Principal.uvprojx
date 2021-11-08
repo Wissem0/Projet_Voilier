@@ -10,7 +10,6 @@
       <TargetName>Réel</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060960::V5.06 update 7 (build 960)::.\ARMCC</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -414,19 +413,9 @@
               <FilePath>..\..\_DRIVERS\MyADC.c</FilePath>
             </File>
             <File>
-              <FileName>MyADC.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\_DRIVERS\MyADC.h</FilePath>
-            </File>
-            <File>
               <FileName>MyGPIO.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\_DRIVERS\MyGPIO.c</FilePath>
-            </File>
-            <File>
-              <FileName>MyGPIO.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\_DRIVERS\MyGPIO.h</FilePath>
             </File>
             <File>
               <FileName>MyTimer.c</FileName>
@@ -434,19 +423,9 @@
               <FilePath>..\..\_DRIVERS\MyTimer.c</FilePath>
             </File>
             <File>
-              <FileName>MyTimer.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\_DRIVERS\MyTimer.h</FilePath>
-            </File>
-            <File>
               <FileName>MyUART.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\_DRIVERS\MyUART.c</FilePath>
-            </File>
-            <File>
-              <FileName>MyUART.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\_DRIVERS\MyUART.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -459,9 +438,9 @@
               <FilePath>..\..\_SERVICES\GestionGirouette.c</FilePath>
             </File>
             <File>
-              <FileName>GestionGirouette.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\_SERVICES\GestionGirouette.h</FilePath>
+              <FileName>Orientation.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\_SERVICES\Orientation.c</FilePath>
             </File>
           </Files>
         </Group>
