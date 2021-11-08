@@ -10,6 +10,7 @@
       <TargetName>Simulé</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060960::V5.06 update 7 (build 960)::.\ARMCC</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -381,9 +382,33 @@
       <Groups>
         <Group>
           <GroupName>MesSources</GroupName>
+          <Files>
+            <File>
+              <FileName>Principal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Principal.c</FilePath>
+            </File>
+            <File>
+              <FileName>GestionGirouette.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\_SERVICES\GestionGirouette.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>MesDrivers</GroupName>
+          <Files>
+            <File>
+              <FileName>MyGPIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\_DRIVERS\MyGPIO.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyTimer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\_DRIVERS\MyTimer.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>
@@ -397,6 +422,7 @@
       <TargetName>Réel</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060960::V5.06 update 7 (build 960)::.\ARMCC</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -500,9 +526,9 @@
           <SimDlgDll>DCM.DLL</SimDlgDll>
           <SimDlgDllArguments>-pCM3</SimDlgDllArguments>
           <TargetDllName>SARMCM3.DLL</TargetDllName>
-          <TargetDllArguments></TargetDllArguments>
-          <TargetDlgDll>TCM.DLL</TargetDlgDll>
-          <TargetDlgDllArguments>-pCM3</TargetDlgDllArguments>
+          <TargetDllArguments>-REMAP</TargetDllArguments>
+          <TargetDlgDll>TARMSTM.DLL</TargetDlgDll>
+          <TargetDlgDllArguments>-pSTM32F103RB</TargetDlgDllArguments>
         </DllOption>
         <DebugOption>
           <OPTHX>
@@ -768,9 +794,33 @@
       <Groups>
         <Group>
           <GroupName>MesSources</GroupName>
+          <Files>
+            <File>
+              <FileName>Principal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Principal.c</FilePath>
+            </File>
+            <File>
+              <FileName>GestionGirouette.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\_SERVICES\GestionGirouette.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>MesDrivers</GroupName>
+          <Files>
+            <File>
+              <FileName>MyGPIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\_DRIVERS\MyGPIO.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyTimer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\_DRIVERS\MyTimer.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>

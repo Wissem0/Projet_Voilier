@@ -18,16 +18,25 @@ Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
 CPU DLL:         SARMCM3.DLL V5.33.0.0
 Dialog DLL:      DCM.DLL V1.17.3.0
 Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.8.0
-Dialog DLL:      TCM.DLL V1.48.0.0
+Dialog DLL:      TARMSTM.DLL V1.66.0.0
  
 <h2>Project:</h2>
-C:\Users\Rostom\Desktop\Misc\Old Projects\Projet_Voilier\_APPLICATIONS\Girouette_test\Girouette _test.uvprojx
-Project File Date:  11/05/2021
+C:\Users\Rostom\Desktop\Misc\Git Projects\Projet_Voilier\_APPLICATIONS\Girouette_test\Girouette _test.uvprojx
+Project File Date:  11/08/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Réel'
-".\Objects\Girouette _test.axf" - 0 Error(s), 0 Warning(s).
+compiling Principal.c...
+..\..\_SERVICES\GestionGirouette.h(5): warning:  #1295-D: Deprecated declaration Girouette_recup_angle - give arg types
+  void Girouette_recup_angle();
+Source\Principal.c(23): warning:  #1-D: last line of file ends without a newline
+  }
+Source\Principal.c: 2 warnings, 0 errors
+compiling MyTimer.c...
+linking...
+Program Size: Code=3916 RO-data=268 RW-data=64 ZI-data=1632  
+".\Objects\Girouette _test.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -55,9 +64,9 @@ Package Vendor: Keil
 
    * Component: Keil::Device:Startup:1.0.0
       Source file:   Device\Source\ARM\startup_stm32f10x_md.s
-      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
-      Source file:   Device\Source\system_stm32f10x.c
       Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\Source\system_stm32f10x.c
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
 Build Time Elapsed:  00:00:01
 </pre>
 </body>
