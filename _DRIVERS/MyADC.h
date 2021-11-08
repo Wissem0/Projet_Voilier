@@ -4,9 +4,7 @@
 
 
 //Initialise l'ADC
-void MyADC_Init ( ADC_TypeDef * ADC, int channel ) ;
-//Démarre l'ADC donné
-void MyADC_Start( ADC_TypeDef * ADC ) ;
+void MyADC_Init ( ADC_TypeDef * ADC , int channel);
 //Récupère la valeur brute donnée par l'ADC
 float MyADC_Read ( ADC_TypeDef * ADC);
 
