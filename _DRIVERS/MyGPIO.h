@@ -8,14 +8,14 @@ typedef struct {
 	char GPIO_Conf ;
 } MyGPIO_Struct_TypeDef ;
 
-#define In_Floating 0x4
+#define In_Floating 0x7
 #define In_PullDown 0x8
-#define In_PullUp 0x9 // on le définit nous même 
+#define In_PullUp 0x8 // on le définit nous même 
 #define In_Analog 0x0
-#define Out_Ppull 0x2
-#define Out_OD 0x6
-#define AltOut_Ppull 0xA
-#define AltOut_OD 0xE
+#define Out_Ppull 0x1
+#define Out_OD 0x5
+#define AltOut_Ppull 0x9
+#define AltOut_OD 0x13
 
 void MyGPIO_Init(MyGPIO_Struct_TypeDef * GPIOStructPtr); 
 int MyGPIO_Read(GPIO_TypeDef * GPIO, char GPIO_Pin) ; //renvoie 0 ou autre chose différent de 0

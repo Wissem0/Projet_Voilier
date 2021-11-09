@@ -147,6 +147,8 @@ void MyTimer_timer_encodeur_init(TIM_TypeDef * Timer_encodeur){
 	//CEN=1
 	//Initialisation
 	MyTimer_Base_Start(Timer_encodeur); //fait la même chose
+	Timer_encodeur->ARR=0x59F;
+	Timer_encodeur->PSC=0x0;
 
 
 
