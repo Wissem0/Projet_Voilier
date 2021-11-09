@@ -10,7 +10,7 @@ typedef struct {
 
 #define In_Floating 0x7
 #define In_PullDown 0x8
-#define In_PullUp 0x8 // on le définit nous même 
+#define In_PullUp 0x8 
 #define In_Analog 0x0
 #define Out_Ppull 0x1
 #define Out_OD 0x5
@@ -18,7 +18,7 @@ typedef struct {
 #define AltOut_OD 0x13
 
 void MyGPIO_Init(MyGPIO_Struct_TypeDef * GPIOStructPtr); 
-int MyGPIO_Read(GPIO_TypeDef * GPIO, char GPIO_Pin) ; //renvoie 0 ou autre chose différent de 0
+int MyGPIO_Read(GPIO_TypeDef * GPIO, char GPIO_Pin) ; 
 void MyGPIO_Set(GPIO_TypeDef * GPIO, char GPIO_Pin);
 void MyGPIO_Reset(GPIO_TypeDef * GPIO, char GPIO_Pin);
 void MyGPIO_Toggle(GPIO_TypeDef * GPIO, char GPIO_Pin);

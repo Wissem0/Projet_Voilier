@@ -3,7 +3,7 @@
 #include "MyGPIO.h"
 #include "GestionGirouette.h"
 
-MyTimer_Struct_TypeDef Timer_Enc = {TIM2,1439,0} ; 
+MyTimer_Struct_TypeDef Timer_Enc = {TIM2,1439,0} ; //ARR et PSC changés dans la fonction MyTimer_timer_encodeur_init
 MyTimer_Struct_TypeDef Timer_Moteur = {TIM3,1439,999} ; //20ms
 MyTimer_Struct_TypeDef Timer_IT = {TIM1,1439,99} ; //200ms
 
