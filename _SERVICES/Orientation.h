@@ -1,5 +1,5 @@
-#ifndef ORIENTATION_H__
-#define ORIENTATION_H__
+#ifndef ORIENTATION_H
+#define ORIENTATION_H
 
 void Orientation_Init(void);
 

@@ -3,93 +3,48 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: µVision V5.33.0.0
-Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: Rostom Baccar Rostom, HP Inc., LIC=----
+IDE-Version: µVision V5.34.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Alae Nourdine, INSA, LIC=----
  
 Tool Versions:
-Toolchain:       MDK-Lite  Version: 5.33.0.0
-Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+Toolchain:       MDK-Lite  Version: 5.34.0.0
+Toolchain Path:  E:\KEIL\ARM\ARMCC\Bin
 C Compiler:      Armcc.exe V5.06 update 7 (build 960)
 Assembler:       Armasm.exe V5.06 update 7 (build 960)
 Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
 Library Manager: ArmAr.exe V5.06 update 7 (build 960)
 Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
-CPU DLL:         SARMCM3.DLL V5.33.0.0
+CPU DLL:         SARMCM3.DLL V5.34.0.0
 Dialog DLL:      DARMSTM.DLL V1.68.0.0
 Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.8.0
 Dialog DLL:      TCM.DLL V1.48.0.0
  
 <h2>Project:</h2>
-C:\Users\Rostom\Desktop\Misc\Old Projects\Projet_Voilier\_APPLICATIONS\Voilier_main\Principal.uvprojx
-Project File Date:  11/05/2021
+C:\Users\HP\Desktop\4A\InfoMat\Projet_voilier\_APPLICATIONS\Voilier_main\Principal.uvprojx
+Project File Date:  11/08/2021
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'E:\KEIL\ARM\ARMCC\Bin'
 Build target 'Réel'
 Note: source file '..\..\_DRIVERS\MyADC.c' - object file renamed from '.\Objects\MyADC.o' to '.\Objects\myadc_1.o'.
 Note: source file '..\..\_DRIVERS\MyGPIO.c' - object file renamed from '.\Objects\MyGPIO.o' to '.\Objects\mygpio_1.o'.
 Note: source file '..\..\_DRIVERS\MyTimer.c' - object file renamed from '.\Objects\MyTimer.o' to '.\Objects\mytimer_1.o'.
 Note: source file '..\..\_DRIVERS\MyUART.c' - object file renamed from '.\Objects\MyUART.o' to '.\Objects\myuart_1.o'.
 compiling MyADC.c...
-..\..\_DRIVERS\MyADC.h(14): warning:  #1-D: last line of file ends without a newline
+..\..\_DRIVERS\MyADC.h(12): warning:  #1-D: last line of file ends without a newline
   #endif
-..\..\_DRIVERS\MyADC.c: 1 warning, 0 errors
-compiling MyUART.c...
+..\..\_DRIVERS\MyADC.c(27): error:  #147: declaration is incompatible with "float MyADC_Read(ADC_TypeDef *)"  (declared at line 9 of "..\..\_DRIVERS\MyADC.h")
+  int MyADC_Read ( ADC_TypeDef * ADC )
+..\..\_DRIVERS\MyADC.c: 1 warning, 1 error
 compiling MyADC.c...
-..\..\_DRIVERS\MyADC.h(14): warning:  #1-D: last line of file ends without a newline
+..\..\_DRIVERS\MyADC.h(12): warning:  #1-D: last line of file ends without a newline
   #endif
-..\..\_DRIVERS\MyADC.c: 1 warning, 0 errors
-compiling MyGPIO.c...
-compiling MyGPIO.c...
-compiling MyTimer.c...
-compiling MyTimer.c...
-compiling MyUART.c...
-compiling system_stm32f10x.c...
-compiling GestionGirouette.c...
-..\..\_SERVICES\GestionGirouette.h(5): warning:  #1295-D: Deprecated declaration Girouette_recup_angle - give arg types
-  void Girouette_recup_angle();
-..\..\_SERVICES\GestionGirouette.c: 1 warning, 0 errors
-linking...
-.\Objects\Principal.axf: Error: L6200E: Symbol __asm___7_MyADC_c_f530b67f____REV16 multiply defined (by myadc_1.o and myadc.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol __asm___7_MyADC_c_f530b67f____REVSH multiply defined (by myadc_1.o and myadc.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol __asm___7_MyADC_c_f530b67f____RRX multiply defined (by myadc_1.o and myadc.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol MyADC_Convert multiply defined (by myadc_1.o and myadc.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol MyADC_Init multiply defined (by myadc_1.o and myadc.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol MyADC_Start multiply defined (by myadc_1.o and myadc.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol __asm___8_MyGPIO_c_1cf7c71e____REV16 multiply defined (by mygpio_1.o and mygpio.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol __asm___8_MyGPIO_c_1cf7c71e____REVSH multiply defined (by mygpio_1.o and mygpio.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol __asm___8_MyGPIO_c_1cf7c71e____RRX multiply defined (by mygpio_1.o and mygpio.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol MyGPIO_Activate multiply defined (by mygpio_1.o and mygpio.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol MyGPIO_Init multiply defined (by mygpio_1.o and mygpio.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol MyGPIO_Read multiply defined (by mygpio_1.o and mygpio.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol MyGPIO_Reset multiply defined (by mygpio_1.o and mygpio.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol MyGPIO_Set multiply defined (by mygpio_1.o and mygpio.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol MyGPIO_Toggle multiply defined (by mygpio_1.o and mygpio.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol __asm___9_MyTimer_c_21c6ffdc____REV16 multiply defined (by mytimer_1.o and mytimer.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol __asm___9_MyTimer_c_21c6ffdc____REVSH multiply defined (by mytimer_1.o and mytimer.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol __asm___9_MyTimer_c_21c6ffdc____RRX multiply defined (by mytimer_1.o and mytimer.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol IT_function_TIM1 multiply defined (by mytimer_1.o and mytimer.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol IT_function_TIM2 multiply defined (by mytimer_1.o and mytimer.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol IT_function_TIM3 multiply defined (by mytimer_1.o and mytimer.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol IT_function_TIM4 multiply defined (by mytimer_1.o and mytimer.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol MyTimer_Active_IT multiply defined (by mytimer_1.o and mytimer.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol MyTimer_Base_Init multiply defined (by mytimer_1.o and mytimer.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol MyTimer_PWM multiply defined (by mytimer_1.o and mytimer.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol MyTimer_PWM_Cycle multiply defined (by mytimer_1.o and mytimer.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol MyTimer_timer_encodeur_init multiply defined (by mytimer_1.o and mytimer.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol TIM1_IRQHandler multiply defined (by mytimer_1.o and mytimer.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol TIM2_IRQHandler multiply defined (by mytimer_1.o and mytimer.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol TIM3_IRQHandler multiply defined (by mytimer_1.o and mytimer.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol TIM4_IRQHandler multiply defined (by mytimer_1.o and mytimer.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol __asm___8_MyUART_c_1ee62d96____REV16 multiply defined (by myuart_1.o and myuart.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol __asm___8_MyUART_c_1ee62d96____REVSH multiply defined (by myuart_1.o and myuart.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol __asm___8_MyUART_c_1ee62d96____RRX multiply defined (by myuart_1.o and myuart.o).
-.\Objects\Principal.axf: Error: L6200E: Symbol MyUART_Send multiply defined (by myuart_1.o and myuart.o).
-Not enough information to list image symbols.
-Not enough information to list load addresses in the image map.
-Finished: 2 information, 0 warning and 35 error messages.
-".\Objects\Principal.axf" - 35 Error(s), 3 Warning(s).
+..\..\_DRIVERS\MyADC.c(27): error:  #147: declaration is incompatible with "float MyADC_Read(ADC_TypeDef *)"  (declared at line 9 of "..\..\_DRIVERS\MyADC.h")
+  int MyADC_Read ( ADC_TypeDef * ADC )
+..\..\_DRIVERS\MyADC.c: 1 warning, 1 error
+compiling Orientation.c...
+".\Objects\Principal.axf" - 2 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -108,8 +63,8 @@ Package Vendor: Keil
 <h2>Collection of Component include folders:</h2>
   .\RTE\Device\STM32F103RB
   .\RTE\_R_el
-  C:\Users\Rostom\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
-  C:\Users\Rostom\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include
+  E:\KEIL\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  E:\KEIL\Keil\STM32F1xx_DFP\2.3.0\Device\Include
 
 <h2>Collection of Component Files used:</h2>
 
@@ -121,7 +76,7 @@ Package Vendor: Keil
       Include file:  RTE_Driver\Config\RTE_Device.h
       Source file:   Device\Source\ARM\STM32F1xx_OPT.s
 Target not created.
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

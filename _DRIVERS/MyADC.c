@@ -24,7 +24,7 @@ void MyADC_Init ( ADC_TypeDef * ADC , int channel)
 
 
 
-int MyADC_Read ( ADC_TypeDef * ADC )
+float MyADC_Read ( ADC_TypeDef * ADC )
 {
 	ADC->CR2 |= ADC_CR2_ADON; 
 	while(!(ADC->SR & ADC_SR_EOC) ) {} // attente de la fin de conversion
