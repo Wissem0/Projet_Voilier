@@ -1,33 +1,28 @@
 #include "MyGPIO.h"
 #include "MyTimer.h"
 #include "stm32f10x.h"
-#include "Orientation.h"
+#include "Gestion_Plateau.h"
+#include "MyUART.h"
 
 
-MyGPIO_Struct_TypeDef sortiePWM = {GPIOA, 1, AltOut_Ppull} ;
+/*MyGPIO_Struct_TypeDef sortiePWM = {GPIOA, 1, AltOut_Ppull} ;
 MyGPIO_Struct_TypeDef sortieBitSens = {GPIOC, 7, Out_Ppull} ;
-MyTimer_Struct_TypeDef MonTimer;
+MyTimer_Struct_TypeDef MonTimer;*/
 	
-void Orientation_Init(void){
-	// Pin PWM (PA1)
-	MyGPIO_Init(&sortiePWM);
-	// Pin bit de sens (PC7)
-	MyGPIO_Init(&sortieBitSens);
+void Gestion_Plateau_Init(MyTimer_Struct_TypeDef * Timer_PWM, MyGPIO_Struct_TypeDef* BROCHE_PWM,
+MyGPIO_Struct_TypeDef* PIN_SENS, USART_TypeDef * UART, void (*IT_function) (void)){
+
+	MyTimer_Base_Init (Timer_PWM,Timer_PWM->ARR,Timer_PWM->PSC ) ;
+	MyGPIO_Init (BROCHE_PWM) ;
+	MyGPIO_Init (PIN_SENS) ;
+	MyUART_Init(UART, 9600);
+	MyUART_ActiveIT(UART, 3 ,IT_function);
+	MyTimer_PWM (Timer_PWM->Timer, 1) ;
 	
-	// Initialisation du Timer 2 pour une fréquence 20kHz
-	MonTimer.Timer = TIM2 ;
-	MonTimer.ARR = 3599 ;
-	MonTimer.PSC = 0 ;
-	MyTimer_Base_Init(&MonTimer,MonTimer.ARR,MonTimer.PSC);
-	
-	// Initialisation de la PWM sur le channel 2 du Timer 2
-	MyTimer_PWM(TIM2, 2);
-	
-	// Etablissement du rapport cyclique à 0%
-	MyTimer_PWM_Cycle(TIM2, 1, 0);
-	
-	// Lancement du compteur
-	MyTimer_Base_Start(TIM2);
+
 }
+
+
+
 
 
