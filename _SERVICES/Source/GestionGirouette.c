@@ -41,5 +41,7 @@ MyTimer_Struct_TypeDef *Timer_interruption){
 	MyTimer_Base_Init(Timer_interruption,Timer_interruption->ARR,Timer_interruption->PSC);
 	MyTimer_Active_IT(Timer_interruption->Timer,3,Girouette_recup_angle);
 	MyTimer_Base_Start(Timer_interruption->Timer);
+
+
 }
 

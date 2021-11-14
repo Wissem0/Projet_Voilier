@@ -110,7 +110,7 @@ void MyTimer_PWM(TIM_TypeDef * Timer, char Channel) {
 			Timer->CCER |= TIM_CCER_CC4E;
 			break ;
 	}
-	//on autorise le registre de auto-reload preload en ?crivant 1 dans le registre ARPE de CR1
+	//on autorise le registre de auto-reload preload en ecrivant 1 dans le registre ARPE de CR1
 	Timer -> CR1 |= TIM_CR1_ARPE ;
 }
 
