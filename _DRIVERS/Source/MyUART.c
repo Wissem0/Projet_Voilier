@@ -11,7 +11,7 @@ void MyUART_Init (MyUART_Struct_TypeDef *UARTStructPtr) {
 	//Configuration du GPIO
 	MyGPIO_Struct_TypeDef gpio ;
 	gpio.GPIO_Conf = AltOut_Ppull ;
-	MyGPIO_Init(&gpio) ;
+
 	
 	//Configuration de l'UART
 	UARTStructPtr -> UART->CR1 |= USART_CR1_UE; //USART activé
@@ -34,6 +34,7 @@ void MyUART_Init (MyUART_Struct_TypeDef *UARTStructPtr) {
 		gpio.GPIO_Pin = 10 ;
 	}
 	
+	MyGPIO_Init(&gpio) ;
 	UARTStructPtr -> UART->CR1 |= USART_CR1_TE; //Enable transmitter
 	UARTStructPtr -> UART->CR1 |= USART_CR1_RE; //Enable receiver
 	
