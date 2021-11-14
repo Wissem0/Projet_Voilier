@@ -6,7 +6,7 @@ void (*ptrUART1) (void);
 void (*ptrUART3) (void); 
 
 
-void MyUART_Init (MyUART_Struct_TypeDef *UARTStructPtr) {
+void MyUART_Init (USART_TypeDef * UART, int BdRate) {
 	
 	//Configuration du GPIO
 	MyGPIO_Struct_TypeDef gpio ;
@@ -14,35 +14,35 @@ void MyUART_Init (MyUART_Struct_TypeDef *UARTStructPtr) {
 
 	
 	//Configuration de l'UART
-	UARTStructPtr -> UART->CR1 |= USART_CR1_UE; //USART activé
-	UARTStructPtr -> UART->CR1 &= ~USART_CR1_M; //Taille de la donnée, ici 8 bits
-	UARTStructPtr -> UART->CR2 &= USART_CR2_STOP; //Choix d'un seul bit de stop
+	UART->CR1 |= USART_CR1_UE; //USART activÃ©
+	UART->CR1 &= ~USART_CR1_M; //Taille de la donnÃ©e, ici 8 bits
+	UART->CR2 &= USART_CR2_STOP; //Choix d'un seul bit de stop
 	
 	//Validation de l'horloge
-	if (UARTStructPtr->UART == USART1) {
+	if (UART == USART1) {
 		RCC->APB2ENR |= RCC_APB2ENR_USART1EN; //validation horloge USART1
-		UARTStructPtr -> UART -> BRR |= (int) 72000000/(UARTStructPtr->UART_BdRate) ; //Fréquence d'horloge de l'USART1 = 72MHz
+		UART -> BRR |= (int) 72000000/(BdRate) ; //FrÃ©quence d'horloge de l'USART1 = 72MHz
 		
 		gpio.GPIO = GPIOA ;
 		gpio.GPIO_Pin = 9 ;
 		
-	}else if (UARTStructPtr->UART == USART3) {
+	}else if (UART == USART3) {
 		RCC->APB1ENR |= RCC_APB1ENR_USART3EN; //validation horloge USART3
-		UARTStructPtr -> UART -> BRR |= (int) 36000000/(UARTStructPtr->UART_BdRate) ; //Fréquence d'horloge de l'USART3 = 32MHZ
+		UART -> BRR |= (int) 36000000/(BdRate) ; //FrÃ©quence d'horloge de l'USART3 = 32MHZ
 		
 		gpio.GPIO = GPIOC ;
 		gpio.GPIO_Pin = 10 ;
 	}
 	
 	MyGPIO_Init(&gpio) ;
-	UARTStructPtr -> UART->CR1 |= USART_CR1_TE; //Enable transmitter
-	UARTStructPtr -> UART->CR1 |= USART_CR1_RE; //Enable receiver
+	UART->CR1 |= USART_CR1_TE; //Enable transmitter
+	UART->CR1 |= USART_CR1_RE; //Enable receiver
 	
 }
 
 void MyUART_ActiveIT (USART_TypeDef * UART, char Prio, void (*IT_function) (void)) {
 	
-	UART->CR1 |= USART_CR1_RXNEIE ; //Envoie d'une demande d'interruption validée
+	UART->CR1 |= USART_CR1_RXNEIE ; //Envoie d'une demande d'interruption validÃ©e
 	
 	if (UART == USART1) {
 		NVIC_EnableIRQ(USART1_IRQn);
@@ -65,7 +65,7 @@ void USART3_IRQHandler (void) {
 void MyUART_Send (USART_TypeDef * UART,char * test) {
 	while (*test != '\0') {
 		while(!(UART->SR & USART_SR_TXE)); 
-		UART->DR = *test; // Ecriture de la donnée dans le registre DR
+		UART->DR = *test; // Ecriture de la donnÃ©e dans le registre DR
 		test++;
 	}
 }

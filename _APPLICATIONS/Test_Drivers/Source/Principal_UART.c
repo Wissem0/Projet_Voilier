@@ -2,21 +2,20 @@
 #include "MyGPIO.h"
 #include "MyUART.h"
 
-MyUART_Struct_TypeDef U ;
+USART_TypeDef * UART ;
 char test ;
 
 void Callback() {
-	test = MyUART_Receive(U.UART);
+	test = MyUART_Receive(UART);
 }
 
 int main(void) 
 { 
-	U.UART=USART1 ;
-	U.UART_BdRate=9600;
+	UART=USART1 ;
 	
-	MyUART_Init (&U) ;
-	MyUART_ActiveIT (U.UART, 1, Callback);
+	MyUART_Init (UART, 9600) ;
+	MyUART_ActiveIT (UART, 1, Callback);
 	
-	MyUART_Send(U.UART, "quelque chose");
+	MyUART_Send(UART, "quelque chose");
 	while(1) ;
 }
