@@ -18,8 +18,8 @@ void MyTimer_Base_Init(MyTimer_Struct_TypeDef * Timer, int ARR, int PSC) {
 		RCC-> APB1ENR |= 0x01 << 1;
 	} else if (Timer ->Timer == TIM4) {
 		RCC-> APB1ENR |= 0x01 << 2;}	
-	Timer->PSC = PSC;
-	Timer->ARR = ARR;
+	Timer->Timer->ARR = ARR;
+	Timer->Timer->PSC = PSC;
 }
 
 void MyTimer_Active_IT ( TIM_TypeDef * Timer , char Prio, void (*IT_function)(void) ) {

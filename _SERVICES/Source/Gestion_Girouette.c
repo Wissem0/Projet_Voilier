@@ -43,5 +43,10 @@ MyTimer_Struct_TypeDef *Timer_interruption){
 	MyTimer_Base_Start(Timer_interruption->Timer);
 	MyTimer_Active_IT(Timer_interruption->Timer,3,Girouette_recup_angle);
 
+
+	/*while(1){
+	MyTimer_PWM_Cycle(TIM3,(TIM2->CNT/4*10./9.0),2);
+	}
+*/
 }
 

@@ -3,11 +3,15 @@
 <title>Static Call Graph - [.\Objects\Girouette _test.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\Girouette _test.axf</H1><HR>
+<<<<<<< Updated upstream
 <BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Mon Nov 15 16:34:45 2021
+=======
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Mon Nov 15 16:37:50 2021
+>>>>>>> Stashed changes
 <BR><P>
-<H3>Maximum Stack Usage =        112 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        128 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-SpeedUpdate &rArr; MyTimer_PWM_Cycle &rArr; __aeabi_dmul
+Girouette_recup_angle &rArr; MyTimer_PWM_Cycle &rArr; __aeabi_dmul
 <P>
 <H3>
 Functions with no stack information
@@ -53,6 +57,7 @@ Function Pointers
  <LI><a href="#[17]">EXTI4_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[24]">EXTI9_5_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[11]">FLASH_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
+ <LI><a href="#[3a]">Girouette_recup_angle</a> from gestion_girouette.o(i.Girouette_recup_angle) referenced from gestion_girouette.o(i.init_girouette)
  <LI><a href="#[5]">HardFault_Handler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[2d]">I2C1_ER_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[2c]">I2C1_EV_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
@@ -69,7 +74,6 @@ Function Pointers
  <LI><a href="#[30]">SPI1_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[31]">SPI2_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[9]">SVC_Handler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
- <LI><a href="#[3a]">SpeedUpdate</a> from principal_test_plateau.o(i.SpeedUpdate) referenced from principal_test_plateau.o(i.main)
  <LI><a href="#[c]">SysTick_Handler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[38]">SystemInit</a> from system_stm32f10x.o(i.SystemInit) referenced from startup_stm32f10x_md.o(.text)
  <LI><a href="#[f]">TAMPER_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
@@ -206,8 +210,13 @@ Global Symbols
 <P><STRONG><a name="[8d]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[46]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
+<<<<<<< Updated upstream
 <BR><BR>[Stack]<UL><LI>Max Depth = 28 + Unknown Stack Size
 <LI>Call Chain = __rt_entry_main &rArr; main &rArr; MyUART_Init &rArr; MyGPIO_Init
+=======
+<BR><BR>[Stack]<UL><LI>Max Depth = 72 + Unknown Stack Size
+<LI>Call Chain = __rt_entry_main &rArr; main &rArr; init_girouette &rArr; MyTimer_Active_IT &rArr; __NVIC_SetPriority
+>>>>>>> Stashed changes
 </UL>
 <BR>[Calls]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -459,6 +468,7 @@ Global Symbols
 
 <P><STRONG><a name="[97]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
 
+<<<<<<< Updated upstream
 <P><STRONG><a name="[4f]"></a>MyGPIO_Init</STRONG> (Thumb, 252 bytes, Stack size 4 bytes, mygpio.o(i.MyGPIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = MyGPIO_Init
 </UL>
@@ -495,10 +505,49 @@ Global Symbols
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 <LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2iz
 <LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
+=======
+<P><STRONG><a name="[3a]"></a>Girouette_recup_angle</STRONG> (Thumb, 140 bytes, Stack size 40 bytes, gestion_girouette.o(i.Girouette_recup_angle))
+<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = Girouette_recup_angle &rArr; MyTimer_PWM_Cycle &rArr; __aeabi_dmul
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpeedUpdate
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2d
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2iz
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_PWM_Cycle
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> gestion_girouette.o(i.init_girouette)
+</UL>
+<P><STRONG><a name="[56]"></a>MyGPIO_Init</STRONG> (Thumb, 166 bytes, Stack size 4 bytes, mygpio.o(i.MyGPIO_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = MyGPIO_Init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Set
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_girouette
 </UL>
 
+<P><STRONG><a name="[57]"></a>MyGPIO_Set</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, mygpio.o(i.MyGPIO_Set))
+<BR><BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Init
+</UL>
+
+<P><STRONG><a name="[58]"></a>MyTimer_Active_IT</STRONG> (Thumb, 118 bytes, Stack size 16 bytes, mytimer.o(i.MyTimer_Active_IT))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = MyTimer_Active_IT &rArr; __NVIC_SetPriority
+</UL>
+<BR>[Calls]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_SetPriority
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_EnableIRQ
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_girouette
+</UL>
+
+<P><STRONG><a name="[60]"></a>MyTimer_Base_Init</STRONG> (Thumb, 98 bytes, Stack size 8 bytes, mytimer.o(i.MyTimer_Base_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = MyTimer_Base_Init
+>>>>>>> Stashed changes
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_girouette
+</UL>
+
+<<<<<<< Updated upstream
 <P><STRONG><a name="[57]"></a>MyUART_ActiveIT</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, myuart.o(i.MyUART_ActiveIT))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = MyUART_ActiveIT &rArr; __NVIC_SetPriority
 </UL>
@@ -537,6 +586,32 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = SystemInit &rArr; SetSysClock &rArr; SetSysClockTo72
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
+=======
+<P><STRONG><a name="[62]"></a>MyTimer_PWM</STRONG> (Thumb, 188 bytes, Stack size 0 bytes, mytimer.o(i.MyTimer_PWM))
+<BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_girouette
+</UL>
+
+<P><STRONG><a name="[55]"></a>MyTimer_PWM_Cycle</STRONG> (Thumb, 266 bytes, Stack size 56 bytes, mytimer.o(i.MyTimer_PWM_Cycle))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = MyTimer_PWM_Cycle &rArr; __aeabi_dmul
+</UL>
+<BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2iz
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Girouette_recup_angle
+</UL>
+
+<P><STRONG><a name="[61]"></a>MyTimer_timer_encodeur_init</STRONG> (Thumb, 76 bytes, Stack size 0 bytes, mytimer.o(i.MyTimer_timer_encodeur_init))
+<BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_girouette
+</UL>
+
+<P><STRONG><a name="[38]"></a>SystemInit</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, system_stm32f10x.o(i.SystemInit))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = SystemInit &rArr; SetSysClock &rArr; SetSysClockTo72
+</UL>
+<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
+>>>>>>> Stashed changes
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(.text)
 </UL>
@@ -565,6 +640,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
+<<<<<<< Updated upstream
 <P><STRONG><a name="[47]"></a>main</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, principal_test_plateau.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = main &rArr; MyUART_Init &rArr; MyGPIO_Init
 </UL>
@@ -573,14 +649,36 @@ Global Symbols
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_PWM
 <LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Init
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Init
+=======
+<P><STRONG><a name="[5f]"></a>init_girouette</STRONG> (Thumb, 128 bytes, Stack size 32 bytes, gestion_girouette.o(i.init_girouette))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = init_girouette &rArr; MyTimer_Active_IT &rArr; __NVIC_SetPriority
+</UL>
+<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_timer_encodeur_init
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_PWM
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Init
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Active_IT
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[47]"></a>main</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, principal_girouette.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = main &rArr; init_girouette &rArr; MyTimer_Active_IT &rArr; __NVIC_SetPriority
+</UL>
+<BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_girouette
+>>>>>>> Stashed changes
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
+<<<<<<< Updated upstream
 <P><STRONG><a name="[60]"></a>__aeabi_d2f</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, d2f.o(x$fpl$d2f))
+=======
+<P><STRONG><a name="[54]"></a>__aeabi_d2f</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, d2f.o(x$fpl$d2f))
+>>>>>>> Stashed changes
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __aeabi_d2f
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpeedUpdate
+<BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Girouette_recup_angle
 </UL>
 
 <P><STRONG><a name="[63]"></a>_d2f</STRONG> (Thumb, 98 bytes, Stack size 32 bytes, d2f.o(x$fpl$d2f), UNUSED)
@@ -588,11 +686,19 @@ Global Symbols
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dnaninf
 </UL>
 
+<<<<<<< Updated upstream
 <P><STRONG><a name="[53]"></a>__aeabi_ddiv</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, ddiv.o(x$fpl$ddiv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __aeabi_ddiv
 </UL>
 <BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_PWM_Cycle
 <LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpeedUpdate
+=======
+<P><STRONG><a name="[50]"></a>__aeabi_ddiv</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, ddiv.o(x$fpl$ddiv))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __aeabi_ddiv
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Girouette_recup_angle
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_PWM_Cycle
+>>>>>>> Stashed changes
 </UL>
 
 <P><STRONG><a name="[66]"></a>_ddiv</STRONG> (Thumb, 552 bytes, Stack size 32 bytes, ddiv.o(x$fpl$ddiv), UNUSED)
@@ -600,16 +706,25 @@ Global Symbols
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dnaninf
 </UL>
 
+<<<<<<< Updated upstream
 <P><STRONG><a name="[56]"></a>__aeabi_d2iz</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, dfix.o(x$fpl$dfix))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __aeabi_d2iz
 </UL>
 <BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_PWM_Cycle
+=======
+<P><STRONG><a name="[51]"></a>__aeabi_d2iz</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, dfix.o(x$fpl$dfix))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __aeabi_d2iz
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Girouette_recup_angle
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_PWM_Cycle
+>>>>>>> Stashed changes
 </UL>
 
 <P><STRONG><a name="[68]"></a>_dfix</STRONG> (Thumb, 94 bytes, Stack size 32 bytes, dfix.o(x$fpl$dfix), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dnaninf
 </UL>
 
+<<<<<<< Updated upstream
 <P><STRONG><a name="[5f]"></a>__aeabi_i2d</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, dflt_clz.o(x$fpl$dflt))
 <BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpeedUpdate
 </UL>
@@ -620,6 +735,25 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __aeabi_dmul
 </UL>
 <BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_PWM_Cycle
+=======
+<P><STRONG><a name="[52]"></a>__aeabi_i2d</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, dflt_clz.o(x$fpl$dflt))
+<BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Girouette_recup_angle
+</UL>
+
+<P><STRONG><a name="[98]"></a>_dflt</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, dflt_clz.o(x$fpl$dflt), UNUSED)
+
+<P><STRONG><a name="[4f]"></a>__aeabi_ui2d</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, dflt_clz.o(x$fpl$dfltu))
+<BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Girouette_recup_angle
+</UL>
+
+<P><STRONG><a name="[99]"></a>_dfltu</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, dflt_clz.o(x$fpl$dfltu), UNUSED)
+
+<P><STRONG><a name="[53]"></a>__aeabi_dmul</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, dmul.o(x$fpl$dmul))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __aeabi_dmul
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Girouette_recup_angle
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_PWM_Cycle
+>>>>>>> Stashed changes
 </UL>
 
 <P><STRONG><a name="[69]"></a>_dmul</STRONG> (Thumb, 332 bytes, Stack size 32 bytes, dmul.o(x$fpl$dmul), UNUSED)
@@ -640,10 +774,17 @@ Global Symbols
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ddiv
 </UL>
 
+<<<<<<< Updated upstream
 <P><STRONG><a name="[52]"></a>__aeabi_f2d</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, f2d.o(x$fpl$f2d))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_f2d
 </UL>
 <BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_PWM_Cycle
+=======
+<P><STRONG><a name="[5b]"></a>__aeabi_f2d</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, f2d.o(x$fpl$f2d))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_f2d
+</UL>
+<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_PWM_Cycle
+>>>>>>> Stashed changes
 </UL>
 
 <P><STRONG><a name="[6a]"></a>_f2d</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, f2d.o(x$fpl$f2d), UNUSED)
@@ -651,8 +792,13 @@ Global Symbols
 <LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dretinf
 </UL>
 
+<<<<<<< Updated upstream
 <P><STRONG><a name="[54]"></a>__aeabi_ui2f</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, fflt_clz.o(x$fpl$ffltu))
 <BR><BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_PWM_Cycle
+=======
+<P><STRONG><a name="[5c]"></a>__aeabi_ui2f</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, fflt_clz.o(x$fpl$ffltu))
+<BR><BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_PWM_Cycle
+>>>>>>> Stashed changes
 </UL>
 
 <P><STRONG><a name="[99]"></a>_ffltu</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, fflt_clz.o(x$fpl$ffltu), UNUSED)
@@ -668,6 +814,7 @@ Global Symbols
 <H3>
 Local Symbols
 </H3>
+<<<<<<< Updated upstream
 <P><STRONG><a name="[58]"></a>__NVIC_EnableIRQ</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, myuart.o(i.__NVIC_EnableIRQ))
 <BR><BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyUART_ActiveIT
 </UL>
@@ -682,14 +829,37 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = SetSysClock &rArr; SetSysClockTo72
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClockTo72
+=======
+<P><STRONG><a name="[59]"></a>__NVIC_EnableIRQ</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, mytimer.o(i.__NVIC_EnableIRQ))
+<BR><BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Active_IT
+</UL>
+
+<P><STRONG><a name="[5a]"></a>__NVIC_SetPriority</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, mytimer.o(i.__NVIC_SetPriority))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __NVIC_SetPriority
+</UL>
+<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Active_IT
+</UL>
+
+<P><STRONG><a name="[5d]"></a>SetSysClock</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, system_stm32f10x.o(i.SetSysClock))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = SetSysClock &rArr; SetSysClockTo72
+</UL>
+<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClockTo72
+>>>>>>> Stashed changes
 </UL>
 <BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
 </UL>
 
+<<<<<<< Updated upstream
 <P><STRONG><a name="[5c]"></a>SetSysClockTo72</STRONG> (Thumb, 214 bytes, Stack size 12 bytes, system_stm32f10x.o(i.SetSysClockTo72))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = SetSysClockTo72
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
+=======
+<P><STRONG><a name="[5e]"></a>SetSysClockTo72</STRONG> (Thumb, 214 bytes, Stack size 12 bytes, system_stm32f10x.o(i.SetSysClockTo72))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = SetSysClockTo72
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
+>>>>>>> Stashed changes
 </UL>
 <P>
 <H3>

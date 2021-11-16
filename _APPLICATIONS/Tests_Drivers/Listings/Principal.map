@@ -4,6 +4,7 @@ Component: ARM Compiler 5.06 update 7 (build 960) Tool: armlink [4d3601]
 
 Section Cross References
 
+<<<<<<< Updated upstream
     principal_uart.o(i.Callback) refers to myuart.o(i.MyUART_Receive) for MyUART_Receive
     principal_uart.o(i.Callback) refers to principal_uart.o(.data) for UART
     principal_uart.o(i.main) refers to mygpio.o(i.MyGPIO_Init) for MyGPIO_Init
@@ -25,6 +26,33 @@ Section Cross References
     startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(.text) for Reset_Handler
     startup_stm32f10x_md.o(RESET) refers to myuart.o(i.USART1_IRQHandler) for USART1_IRQHandler
     startup_stm32f10x_md.o(RESET) refers to myuart.o(i.USART3_IRQHandler) for USART3_IRQHandler
+=======
+    principal_pwm.o(i.main) refers to mygpio.o(i.MyGPIO_Init) for MyGPIO_Init
+    principal_pwm.o(i.main) refers to mytimer.o(i.MyTimer_Base_Init) for MyTimer_Base_Init
+    principal_pwm.o(i.main) refers to mytimer.o(i.MyTimer_PWM) for MyTimer_PWM
+    principal_pwm.o(i.main) refers to mytimer.o(i.MyTimer_PWM_Cycle) for MyTimer_PWM_Cycle
+    principal_pwm.o(i.main) refers to principal_pwm.o(.data) for GPIOA1_Struct
+    mygpio.o(i.MyGPIO_Init) refers to mygpio.o(i.MyGPIO_Set) for MyGPIO_Set
+    mygpio.o(i.MyGPIO_Toggle) refers to mygpio.o(i.MyGPIO_Reset) for MyGPIO_Reset
+    mygpio.o(i.MyGPIO_Toggle) refers to mygpio.o(i.MyGPIO_Set) for MyGPIO_Set
+    mytimer.o(i.MyTimer_Active_IT) refers to mytimer.o(i.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
+    mytimer.o(i.MyTimer_Active_IT) refers to mytimer.o(i.__NVIC_SetPriority) for __NVIC_SetPriority
+    mytimer.o(i.MyTimer_Active_IT) refers to mytimer.o(.data) for IT_function_TIM1
+    mytimer.o(i.MyTimer_PWM_Cycle) refers to f2d.o(.text) for __aeabi_f2d
+    mytimer.o(i.MyTimer_PWM_Cycle) refers to ddiv.o(.text) for __aeabi_ddiv
+    mytimer.o(i.MyTimer_PWM_Cycle) refers to ffltui.o(.text) for __aeabi_ui2f
+    mytimer.o(i.MyTimer_PWM_Cycle) refers to dmul.o(.text) for __aeabi_dmul
+    mytimer.o(i.MyTimer_PWM_Cycle) refers to dfixi.o(.text) for __aeabi_d2iz
+    mytimer.o(i.TIM1_IRQHandler) refers to mytimer.o(.data) for IT_function_TIM1
+    mytimer.o(i.TIM2_IRQHandler) refers to mytimer.o(.data) for IT_function_TIM2
+    mytimer.o(i.TIM3_IRQHandler) refers to mytimer.o(.data) for IT_function_TIM3
+    mytimer.o(i.TIM4_IRQHandler) refers to mytimer.o(.data) for IT_function_TIM4
+    startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
+    startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(.text) for Reset_Handler
+    startup_stm32f10x_md.o(RESET) refers to mytimer.o(i.TIM2_IRQHandler) for TIM2_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to mytimer.o(i.TIM3_IRQHandler) for TIM3_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to mytimer.o(i.TIM4_IRQHandler) for TIM4_IRQHandler
+>>>>>>> Stashed changes
     startup_stm32f10x_md.o(.text) refers to system_stm32f10x.o(i.SystemInit) for SystemInit
     startup_stm32f10x_md.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
     system_stm32f10x.o(i.SetSysClock) refers to system_stm32f10x.o(i.SetSysClockTo72) for SetSysClockTo72
@@ -43,8 +71,15 @@ Section Cross References
     entry2.o(__vectab_stack_and_reset_area) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
     entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
     entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+<<<<<<< Updated upstream
     entry9a.o(.ARM.Collect$$$$0000000B) refers to principal_uart.o(i.main) for main
     entry9b.o(.ARM.Collect$$$$0000000C) refers to principal_uart.o(i.main) for main
+=======
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to principal_pwm.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to principal_pwm.o(i.main) for main
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+>>>>>>> Stashed changes
     init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
 
 
@@ -52,18 +87,35 @@ Section Cross References
 
 Removing Unused input sections from the image.
 
+<<<<<<< Updated upstream
     Removing principal_uart.o(.rev16_text), (4 bytes).
     Removing principal_uart.o(.revsh_text), (4 bytes).
     Removing principal_uart.o(.rrx_text), (6 bytes).
+=======
+    Removing principal_pwm.o(.rev16_text), (4 bytes).
+    Removing principal_pwm.o(.revsh_text), (4 bytes).
+    Removing principal_pwm.o(.rrx_text), (6 bytes).
+>>>>>>> Stashed changes
     Removing mygpio.o(.rev16_text), (4 bytes).
     Removing mygpio.o(.revsh_text), (4 bytes).
     Removing mygpio.o(.rrx_text), (6 bytes).
     Removing mygpio.o(i.MyGPIO_Read), (12 bytes).
     Removing mygpio.o(i.MyGPIO_Reset), (12 bytes).
     Removing mygpio.o(i.MyGPIO_Toggle), (36 bytes).
+<<<<<<< Updated upstream
     Removing myuart.o(.rev16_text), (4 bytes).
     Removing myuart.o(.revsh_text), (4 bytes).
     Removing myuart.o(.rrx_text), (6 bytes).
+=======
+    Removing mytimer.o(.rev16_text), (4 bytes).
+    Removing mytimer.o(.revsh_text), (4 bytes).
+    Removing mytimer.o(.rrx_text), (6 bytes).
+    Removing mytimer.o(i.MyTimer_Active_IT), (148 bytes).
+    Removing mytimer.o(i.MyTimer_timer_encodeur_init), (76 bytes).
+    Removing mytimer.o(i.TIM1_IRQHandler), (36 bytes).
+    Removing mytimer.o(i.__NVIC_EnableIRQ), (34 bytes).
+    Removing mytimer.o(i.__NVIC_SetPriority), (40 bytes).
+>>>>>>> Stashed changes
     Removing startup_stm32f10x_md.o(HEAP), (512 bytes).
     Removing system_stm32f10x.o(.rev16_text), (4 bytes).
     Removing system_stm32f10x.o(.revsh_text), (4 bytes).
@@ -71,7 +123,11 @@ Removing Unused input sections from the image.
     Removing system_stm32f10x.o(i.SystemCoreClockUpdate), (164 bytes).
     Removing system_stm32f10x.o(.data), (20 bytes).
 
+<<<<<<< Updated upstream
 18 unused section(s) (total 812 bytes) removed from the image.
+=======
+24 unused section(s) (total 1170 bytes) removed from the image.
+>>>>>>> Stashed changes
 
 ==============================================================================
 
@@ -81,16 +137,25 @@ Image Symbol Table
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
+<<<<<<< Updated upstream
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+=======
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+>>>>>>> Stashed changes
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+<<<<<<< Updated upstream
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
@@ -105,6 +170,33 @@ Image Symbol Table
     RTE\\Device\\STM32F103RB\\system_stm32f10x.c 0x00000000   Number         0  system_stm32f10x.o ABSOLUTE
     Source\Principal_UART.c                  0x00000000   Number         0  principal_uart.o ABSOLUTE
     Source\\Principal_UART.c                 0x00000000   Number         0  principal_uart.o ABSOLUTE
+=======
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12b.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/f2d.c                  0x00000000   Number         0  f2d.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  fepilogue.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixi.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  ffltui.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    ..\..\_DRIVERS\Source\MyGPIO.c           0x00000000   Number         0  mygpio.o ABSOLUTE
+    ..\..\_DRIVERS\Source\MyTimer.c          0x00000000   Number         0  mytimer.o ABSOLUTE
+    ..\\..\\_DRIVERS\\Source\\MyGPIO.c       0x00000000   Number         0  mygpio.o ABSOLUTE
+    ..\\..\\_DRIVERS\\Source\\MyTimer.c      0x00000000   Number         0  mytimer.o ABSOLUTE
+    RTE\Device\STM32F103RB\startup_stm32f10x_md.s 0x00000000   Number         0  startup_stm32f10x_md.o ABSOLUTE
+    RTE\Device\STM32F103RB\system_stm32f10x.c 0x00000000   Number         0  system_stm32f10x.o ABSOLUTE
+    RTE\\Device\\STM32F103RB\\system_stm32f10x.c 0x00000000   Number         0  system_stm32f10x.o ABSOLUTE
+    Source\Principal_PWM.c                   0x00000000   Number         0  principal_pwm.o ABSOLUTE
+    Source\\Principal_PWM.c                  0x00000000   Number         0  principal_pwm.o ABSOLUTE
+>>>>>>> Stashed changes
     dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
     handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
     init.s                                   0x00000000   Number         0  init.o ABSOLUTE
@@ -121,6 +213,7 @@ Image Symbol Table
     .ARM.Collect$$$$00002712                 0x08000100   Section        4  entry2.o(.ARM.Collect$$$$00002712)
     __lit__00000000                          0x08000100   Data           4  entry2.o(.ARM.Collect$$$$00002712)
     .text                                    0x08000104   Section       36  startup_stm32f10x_md.o(.text)
+<<<<<<< Updated upstream
     .text                                    0x08000128   Section       36  init.o(.text)
     i.Callback                               0x0800014c   Section        0  principal_uart.o(i.Callback)
     i.MyGPIO_Init                            0x08000164   Section        0  mygpio.o(i.MyGPIO_Init)
@@ -147,13 +240,51 @@ Image Symbol Table
     .data                                    0x20000000   Section       13  principal_uart.o(.data)
     .data                                    0x20000010   Section        8  myuart.o(.data)
     STACK                                    0x20000018   Section     1024  startup_stm32f10x_md.o(STACK)
+=======
+    .text                                    0x08000128   Section        0  dmul.o(.text)
+    .text                                    0x0800020c   Section        0  ddiv.o(.text)
+    .text                                    0x080002ea   Section        0  ffltui.o(.text)
+    .text                                    0x080002f4   Section        0  dfixi.o(.text)
+    .text                                    0x08000332   Section        0  f2d.o(.text)
+    .text                                    0x08000358   Section        0  llushr.o(.text)
+    .text                                    0x08000378   Section        0  iusefp.o(.text)
+    .text                                    0x08000378   Section        0  fepilogue.o(.text)
+    .text                                    0x080003e6   Section        0  depilogue.o(.text)
+    .text                                    0x080004a0   Section       36  init.o(.text)
+    .text                                    0x080004c4   Section        0  llshl.o(.text)
+    i.MyGPIO_Init                            0x080004e2   Section        0  mygpio.o(i.MyGPIO_Init)
+    i.MyGPIO_Set                             0x08000588   Section        0  mygpio.o(i.MyGPIO_Set)
+    i.MyTimer_Base_Init                      0x08000590   Section        0  mytimer.o(i.MyTimer_Base_Init)
+    i.MyTimer_PWM                            0x08000604   Section        0  mytimer.o(i.MyTimer_PWM)
+    i.MyTimer_PWM_Cycle                      0x080006c4   Section        0  mytimer.o(i.MyTimer_PWM_Cycle)
+    i.SetSysClock                            0x080007d4   Section        0  system_stm32f10x.o(i.SetSysClock)
+    SetSysClock                              0x080007d5   Thumb Code     8  system_stm32f10x.o(i.SetSysClock)
+    i.SetSysClockTo72                        0x080007dc   Section        0  system_stm32f10x.o(i.SetSysClockTo72)
+    SetSysClockTo72                          0x080007dd   Thumb Code   214  system_stm32f10x.o(i.SetSysClockTo72)
+    i.SystemInit                             0x080008bc   Section        0  system_stm32f10x.o(i.SystemInit)
+    i.TIM2_IRQHandler                        0x0800091c   Section        0  mytimer.o(i.TIM2_IRQHandler)
+    i.TIM3_IRQHandler                        0x0800093c   Section        0  mytimer.o(i.TIM3_IRQHandler)
+    i.TIM4_IRQHandler                        0x0800095c   Section        0  mytimer.o(i.TIM4_IRQHandler)
+    i.__scatterload_copy                     0x0800097c   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x0800098a   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x0800098c   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.main                                   0x0800099c   Section        0  principal_pwm.o(i.main)
+    .data                                    0x20000000   Section       16  principal_pwm.o(.data)
+    .data                                    0x20000010   Section       16  mytimer.o(.data)
+    STACK                                    0x20000020   Section     1024  startup_stm32f10x_md.o(STACK)
+>>>>>>> Stashed changes
 
     Global Symbols
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
+<<<<<<< Updated upstream
     BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
     __ARM_use_no_argv                        0x00000000   Number         0  principal_uart.o ABSOLUTE
+=======
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  principal_pwm.o ABSOLUTE
+>>>>>>> Stashed changes
     __arm_fini_                               - Undefined Weak Reference
     __cpp_initialize__aeabi_                  - Undefined Weak Reference
     __cxa_finalize                            - Undefined Weak Reference
@@ -216,14 +347,20 @@ Image Symbol Table
     TIM1_CC_IRQHandler                       0x0800011f   Thumb Code     0  startup_stm32f10x_md.o(.text)
     TIM1_TRG_COM_IRQHandler                  0x0800011f   Thumb Code     0  startup_stm32f10x_md.o(.text)
     TIM1_UP_IRQHandler                       0x0800011f   Thumb Code     0  startup_stm32f10x_md.o(.text)
+<<<<<<< Updated upstream
     TIM2_IRQHandler                          0x0800011f   Thumb Code     0  startup_stm32f10x_md.o(.text)
     TIM3_IRQHandler                          0x0800011f   Thumb Code     0  startup_stm32f10x_md.o(.text)
     TIM4_IRQHandler                          0x0800011f   Thumb Code     0  startup_stm32f10x_md.o(.text)
+=======
+    USART1_IRQHandler                        0x0800011f   Thumb Code     0  startup_stm32f10x_md.o(.text)
+>>>>>>> Stashed changes
     USART2_IRQHandler                        0x0800011f   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USART3_IRQHandler                        0x0800011f   Thumb Code     0  startup_stm32f10x_md.o(.text)
     USBWakeUp_IRQHandler                     0x0800011f   Thumb Code     0  startup_stm32f10x_md.o(.text)
     USB_HP_CAN1_TX_IRQHandler                0x0800011f   Thumb Code     0  startup_stm32f10x_md.o(.text)
     USB_LP_CAN1_RX0_IRQHandler               0x0800011f   Thumb Code     0  startup_stm32f10x_md.o(.text)
     WWDG_IRQHandler                          0x0800011f   Thumb Code     0  startup_stm32f10x_md.o(.text)
+<<<<<<< Updated upstream
     __scatterload                            0x08000129   Thumb Code    28  init.o(.text)
     __scatterload_rt2                        0x08000129   Thumb Code     0  init.o(.text)
     Callback                                 0x0800014d   Thumb Code    16  principal_uart.o(i.Callback)
@@ -248,6 +385,46 @@ Image Symbol Table
     ptrUART1                                 0x20000010   Data           4  myuart.o(.data)
     ptrUART3                                 0x20000014   Data           4  myuart.o(.data)
     __initial_sp                             0x20000418   Data           0  startup_stm32f10x_md.o(STACK)
+=======
+    __aeabi_dmul                             0x08000129   Thumb Code   228  dmul.o(.text)
+    __aeabi_ddiv                             0x0800020d   Thumb Code   222  ddiv.o(.text)
+    __aeabi_ui2f                             0x080002eb   Thumb Code    10  ffltui.o(.text)
+    __aeabi_d2iz                             0x080002f5   Thumb Code    62  dfixi.o(.text)
+    __aeabi_f2d                              0x08000333   Thumb Code    38  f2d.o(.text)
+    __aeabi_llsr                             0x08000359   Thumb Code    32  llushr.o(.text)
+    _ll_ushift_r                             0x08000359   Thumb Code     0  llushr.o(.text)
+    __I$use$fp                               0x08000379   Thumb Code     0  iusefp.o(.text)
+    _float_round                             0x08000379   Thumb Code    18  fepilogue.o(.text)
+    _float_epilogue                          0x0800038b   Thumb Code    92  fepilogue.o(.text)
+    _double_round                            0x080003e7   Thumb Code    30  depilogue.o(.text)
+    _double_epilogue                         0x08000405   Thumb Code   156  depilogue.o(.text)
+    __scatterload                            0x080004a1   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x080004a1   Thumb Code     0  init.o(.text)
+    __aeabi_llsl                             0x080004c5   Thumb Code    30  llshl.o(.text)
+    _ll_shift_l                              0x080004c5   Thumb Code     0  llshl.o(.text)
+    MyGPIO_Init                              0x080004e3   Thumb Code   166  mygpio.o(i.MyGPIO_Init)
+    MyGPIO_Set                               0x08000589   Thumb Code     8  mygpio.o(i.MyGPIO_Set)
+    MyTimer_Base_Init                        0x08000591   Thumb Code    98  mytimer.o(i.MyTimer_Base_Init)
+    MyTimer_PWM                              0x08000605   Thumb Code   188  mytimer.o(i.MyTimer_PWM)
+    MyTimer_PWM_Cycle                        0x080006c5   Thumb Code   266  mytimer.o(i.MyTimer_PWM_Cycle)
+    SystemInit                               0x080008bd   Thumb Code    78  system_stm32f10x.o(i.SystemInit)
+    TIM2_IRQHandler                          0x0800091d   Thumb Code    26  mytimer.o(i.TIM2_IRQHandler)
+    TIM3_IRQHandler                          0x0800093d   Thumb Code    22  mytimer.o(i.TIM3_IRQHandler)
+    TIM4_IRQHandler                          0x0800095d   Thumb Code    22  mytimer.o(i.TIM4_IRQHandler)
+    __scatterload_copy                       0x0800097d   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x0800098b   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x0800098d   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    main                                     0x0800099d   Thumb Code    70  principal_pwm.o(i.main)
+    Region$$Table$$Base                      0x080009f4   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08000a14   Number         0  anon$$obj.o(Region$$Table)
+    Timer                                    0x20000000   Data           8  principal_pwm.o(.data)
+    GPIOA1_Struct                            0x20000008   Data           8  principal_pwm.o(.data)
+    IT_function_TIM1                         0x20000010   Data           4  mytimer.o(.data)
+    IT_function_TIM2                         0x20000014   Data           4  mytimer.o(.data)
+    IT_function_TIM3                         0x20000018   Data           4  mytimer.o(.data)
+    IT_function_TIM4                         0x2000001c   Data           4  mytimer.o(.data)
+    __initial_sp                             0x20000420   Data           0  startup_stm32f10x_md.o(STACK)
+>>>>>>> Stashed changes
 
 
 
@@ -257,6 +434,7 @@ Memory Map of the image
 
   Image Entry point : 0x08000105
 
+<<<<<<< Updated upstream
   Load Region LR_1 (Base: 0x08000000, Size: 0x00000608, Max: 0xffffffff, ABSOLUTE)
 
     Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000005f0, Max: 0xffffffff, ABSOLUTE)
@@ -313,6 +491,69 @@ Memory Map of the image
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x20000018        -       0x00000400   Zero   RW          197    STACK               startup_stm32f10x_md.o
+=======
+  Load Region LR_1 (Base: 0x08000000, Size: 0x00000a34, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000a14, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x000000ec   Data   RO          208    RESET               startup_stm32f10x_md.o
+    0x080000ec   0x080000ec   0x00000000   Code   RO          259  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080000ec   0x080000ec   0x00000004   Code   RO          272    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x080000f0   0x080000f0   0x00000004   Code   RO          275    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO          277    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO          279    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080000f4   0x080000f4   0x00000008   Code   RO          280    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080000fc   0x080000fc   0x00000004   Code   RO          287    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
+    0x08000100   0x08000100   0x00000000   Code   RO          282    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
+    0x08000100   0x08000100   0x00000000   Code   RO          284    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
+    0x08000100   0x08000100   0x00000004   Code   RO          273    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000104   0x08000104   0x00000024   Code   RO          209  * .text               startup_stm32f10x_md.o
+    0x08000128   0x08000128   0x000000e4   Code   RO          262    .text               mf_w.l(dmul.o)
+    0x0800020c   0x0800020c   0x000000de   Code   RO          264    .text               mf_w.l(ddiv.o)
+    0x080002ea   0x080002ea   0x0000000a   Code   RO          266    .text               mf_w.l(ffltui.o)
+    0x080002f4   0x080002f4   0x0000003e   Code   RO          268    .text               mf_w.l(dfixi.o)
+    0x08000332   0x08000332   0x00000026   Code   RO          270    .text               mf_w.l(f2d.o)
+    0x08000358   0x08000358   0x00000020   Code   RO          288    .text               mc_w.l(llushr.o)
+    0x08000378   0x08000378   0x00000000   Code   RO          290    .text               mc_w.l(iusefp.o)
+    0x08000378   0x08000378   0x0000006e   Code   RO          291    .text               mf_w.l(fepilogue.o)
+    0x080003e6   0x080003e6   0x000000ba   Code   RO          293    .text               mf_w.l(depilogue.o)
+    0x080004a0   0x080004a0   0x00000024   Code   RO          295    .text               mc_w.l(init.o)
+    0x080004c4   0x080004c4   0x0000001e   Code   RO          297    .text               mc_w.l(llshl.o)
+    0x080004e2   0x080004e2   0x000000a6   Code   RO           67    i.MyGPIO_Init       mygpio.o
+    0x08000588   0x08000588   0x00000008   Code   RO           70    i.MyGPIO_Set        mygpio.o
+    0x08000590   0x08000590   0x00000074   Code   RO          121    i.MyTimer_Base_Init  mytimer.o
+    0x08000604   0x08000604   0x000000c0   Code   RO          122    i.MyTimer_PWM       mytimer.o
+    0x080006c4   0x080006c4   0x00000110   Code   RO          123    i.MyTimer_PWM_Cycle  mytimer.o
+    0x080007d4   0x080007d4   0x00000008   Code   RO          216    i.SetSysClock       system_stm32f10x.o
+    0x080007dc   0x080007dc   0x000000e0   Code   RO          217    i.SetSysClockTo72   system_stm32f10x.o
+    0x080008bc   0x080008bc   0x00000060   Code   RO          219    i.SystemInit        system_stm32f10x.o
+    0x0800091c   0x0800091c   0x00000020   Code   RO          126    i.TIM2_IRQHandler   mytimer.o
+    0x0800093c   0x0800093c   0x00000020   Code   RO          127    i.TIM3_IRQHandler   mytimer.o
+    0x0800095c   0x0800095c   0x00000020   Code   RO          128    i.TIM4_IRQHandler   mytimer.o
+    0x0800097c   0x0800097c   0x0000000e   Code   RO          301    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0800098a   0x0800098a   0x00000002   Code   RO          302    i.__scatterload_null  mc_w.l(handlers.o)
+    0x0800098c   0x0800098c   0x0000000e   Code   RO          303    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0800099a   0x0800099a   0x00000002   PAD
+    0x0800099c   0x0800099c   0x00000058   Code   RO            4    i.main              principal_pwm.o
+    0x080009f4   0x080009f4   0x00000020   Data   RO          299    Region$$Table       anon$$obj.o
+
+
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x08000a14, Size: 0x00000020, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x08000a14   0x00000010   Data   RW            5    .data               principal_pwm.o
+    0x20000010   0x08000a24   0x00000010   Data   RW          131    .data               mytimer.o
+
+
+    Execution Region ER_ZI (Exec base: 0x20000020, Load base: 0x08000a34, Size: 0x00000400, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000020        -       0x00000400   Zero   RW          206    STACK               startup_stm32f10x_md.o
+>>>>>>> Stashed changes
 
 
 ==============================================================================
@@ -322,6 +563,7 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
+<<<<<<< Updated upstream
        280         20          0          0          0       1555   mygpio.o
        406         62          0          8          0     207847   myuart.o
        108         42          0         13          0     208772   principal_uart.o
@@ -332,6 +574,18 @@ Image component sizes
       1160        160        268         24       1024     421195   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          2          0          0          3          0          0   (incl. Padding)
+=======
+       174          0          0          0          0       1483   mygpio.o
+       676         54          0         16          0       4418   mytimer.o
+        88         18          0         16          0     208413   principal_pwm.o
+        36          8        236          0       1024        848   startup_stm32f10x_md.o
+       328         28          0          0          0       2137   system_stm32f10x.o
+
+    ----------------------------------------------------------------------
+      1302        108        268         32       1024     217299   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         0          0          0          0          0          0   (incl. Padding)
+>>>>>>> Stashed changes
 
     ----------------------------------------------------------------------
 
@@ -348,19 +602,30 @@ Image component sizes
          8          4          0          0          0          0   entry9a.o
         30          0          0          0          0          0   handlers.o
         36          8          0          0          0         68   init.o
+         0          0          0          0          0          0   iusefp.o
+        30          0          0          0          0         68   llshl.o
+        32          0          0          0          0         68   llushr.o
+       222          0          0          0          0        100   ddiv.o
+       186          0          0          0          0        176   depilogue.o
+        62          0          0          0          0         80   dfixi.o
+       228          0          0          0          0         96   dmul.o
+        38          0          0          0          0         68   f2d.o
+       110          0          0          0          0        168   fepilogue.o
+        10          0          0          0          0         68   ffltui.o
 
     ----------------------------------------------------------------------
-        92         16          0          0          0         68   Library Totals
+      1010         16          0          0          0        960   Library Totals
          2          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
 
-        90         16          0          0          0         68   mc_w.l
+       152         16          0          0          0        204   mc_w.l
+       856          0          0          0          0        756   mf_w.l
 
     ----------------------------------------------------------------------
-        92         16          0          0          0         68   Library Totals
+      1010         16          0          0          0        960   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -369,6 +634,7 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
+<<<<<<< Updated upstream
       1252        176        268         24       1024     420791   Grand Totals
       1252        176        268         24       1024     420791   ELF Image Totals
       1252        176        268         24          0          0   ROM Totals
@@ -378,6 +644,17 @@ Image component sizes
     Total RO  Size (Code + RO Data)                 1520 (   1.48kB)
     Total RW  Size (RW Data + ZI Data)              1048 (   1.02kB)
     Total ROM Size (Code + RO Data + RW Data)       1544 (   1.51kB)
+=======
+      2312        124        268         32       1024     217475   Grand Totals
+      2312        124        268         32       1024     217475   ELF Image Totals
+      2312        124        268         32          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 2580 (   2.52kB)
+    Total RW  Size (RW Data + ZI Data)              1056 (   1.03kB)
+    Total ROM Size (Code + RO Data + RW Data)       2612 (   2.55kB)
+>>>>>>> Stashed changes
 
 ==============================================================================
 

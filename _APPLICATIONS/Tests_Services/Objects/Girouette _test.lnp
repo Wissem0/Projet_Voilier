@@ -1,5 +1,5 @@
 --cpu Cortex-M3
-".\objects\principal_test_plateau.o"
+".\objects\principal_girouette.o"
 ".\objects\mygpio.o"
 ".\objects\mytimer.o"
 ".\objects\myuart.o"

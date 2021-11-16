@@ -384,9 +384,9 @@
           <GroupName>MesSources</GroupName>
           <Files>
             <File>
-              <FileName>Principal_UART.c</FileName>
+              <FileName>Principal_PWM.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Source\Principal_UART.c</FilePath>
+              <FilePath>.\Source\Principal_PWM.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -399,9 +399,9 @@
               <FilePath>..\..\_DRIVERS\Source\MyGPIO.c</FilePath>
             </File>
             <File>
-              <FileName>MyUART.c</FileName>
+              <FileName>MyTimer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\_DRIVERS\Source\MyUART.c</FilePath>
+              <FilePath>..\..\_DRIVERS\Source\MyTimer.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -791,9 +791,9 @@
           <GroupName>MesSources</GroupName>
           <Files>
             <File>
-              <FileName>Principal_UART.c</FileName>
+              <FileName>Principal_PWM.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Source\Principal_UART.c</FilePath>
+              <FilePath>.\Source\Principal_PWM.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -806,9 +806,9 @@
               <FilePath>..\..\_DRIVERS\Source\MyGPIO.c</FilePath>
             </File>
             <File>
-              <FileName>MyUART.c</FileName>
+              <FileName>MyTimer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\_DRIVERS\Source\MyUART.c</FilePath>
+              <FilePath>..\..\_DRIVERS\Source\MyTimer.c</FilePath>
             </File>
           </Files>
         </Group>
