@@ -1,15 +1,19 @@
 #include "MyGPIO.h" 
 
 
-void MyGPIO_Activate(int nb_GPIO) {
+/*void MyGPIO_Activate(int nb_GPIO) {
 	//activer la clock du GPIO donné
 	RCC->APB2ENR |= (0x01 << (nb_GPIO +1)) ;
-}
+}*/
 
 void MyGPIO_Init(MyGPIO_Struct_TypeDef * GPIOStructPtr) {
 	//màj crl si on veut un pull up ou pull down
 	//on reset la conf
-	
+	if ( GPIOStructPtr->GPIO == GPIOA) RCC->APB2ENR |= RCC_APB2ENR_IOPAEN;
+	else if ( GPIOStructPtr->GPIO == GPIOB) RCC->APB2ENR |= RCC_APB2ENR_IOPBEN;
+	else if ( GPIOStructPtr->GPIO == GPIOC) RCC->APB2ENR |= RCC_APB2ENR_IOPCEN;
+	else if ( GPIOStructPtr->GPIO == GPIOD) RCC->APB2ENR |= RCC_APB2ENR_IOPDEN;
+
 	if(GPIOStructPtr->GPIO_Pin > 7){
 		GPIOStructPtr->GPIO->CRH &= ~(0xF << ((GPIOStructPtr->GPIO_Pin*4) - (8*4)));
 		

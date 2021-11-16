@@ -11,12 +11,6 @@ void MyUART_Init (USART_TypeDef * UART, int BdRate) {
 	//Configuration du GPIO
 	MyGPIO_Struct_TypeDef gpio ;
 	gpio.GPIO_Conf = AltOut_Ppull ;
-
-	
-	//Configuration de l'UART
-	UART->CR1 |= USART_CR1_UE; //USART activé
-	UART->CR1 &= ~USART_CR1_M; //Taille de la donnée, ici 8 bits
-	UART->CR2 &= USART_CR2_STOP; //Choix d'un seul bit de stop
 	
 	//Validation de l'horloge
 	if (UART == USART1) {
@@ -33,6 +27,12 @@ void MyUART_Init (USART_TypeDef * UART, int BdRate) {
 		gpio.GPIO = GPIOC ;
 		gpio.GPIO_Pin = 10 ;
 	}
+
+	//Configuration de l'UART
+	UART->CR1 |= USART_CR1_UE; //USART activé
+	UART->CR1 &= ~USART_CR1_M; //Taille de la donnée, ici 8 bits
+	UART->CR2 &= USART_CR2_STOP; //Choix d'un seul bit de stop
+	
 	
 	MyGPIO_Init(&gpio) ;
 	UART->CR1 |= USART_CR1_TE; //Enable transmitter

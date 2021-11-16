@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\Principal.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\Principal.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sun Nov 14 19:30:49 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Tue Nov 16 15:51:41 2021
 <BR><P>
 <H3>Maximum Stack Usage =         28 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -30,7 +30,7 @@ Function Pointers
  <LI><a href="#[4]">BusFault_Handler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[1f]">CAN1_RX1_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[20]">CAN1_SCE_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
- <LI><a href="#[38]">Callback</a> from principal uart.o(i.Callback) referenced from principal uart.o(i.main)
+ <LI><a href="#[38]">Callback</a> from principal_uart.o(i.Callback) referenced from principal_uart.o(i.main)
  <LI><a href="#[15]">DMA1_Channel1_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[16]">DMA1_Channel2_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[17]">DMA1_Channel3_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
@@ -70,9 +70,9 @@ Function Pointers
  <LI><a href="#[25]">TIM1_CC_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[24]">TIM1_TRG_COM_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[23]">TIM1_UP_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
- <LI><a href="#[26]">TIM2_IRQHandler</a> from mytimer.o(i.TIM2_IRQHandler) referenced from startup_stm32f10x_md.o(RESET)
- <LI><a href="#[27]">TIM3_IRQHandler</a> from mytimer.o(i.TIM3_IRQHandler) referenced from startup_stm32f10x_md.o(RESET)
- <LI><a href="#[28]">TIM4_IRQHandler</a> from mytimer.o(i.TIM4_IRQHandler) referenced from startup_stm32f10x_md.o(RESET)
+ <LI><a href="#[26]">TIM2_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
+ <LI><a href="#[27]">TIM3_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
+ <LI><a href="#[28]">TIM4_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[2f]">USART1_IRQHandler</a> from myuart.o(i.USART1_IRQHandler) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[30]">USART2_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[31]">USART3_IRQHandler</a> from myuart.o(i.USART3_IRQHandler) referenced from startup_stm32f10x_md.o(RESET)
@@ -82,7 +82,7 @@ Function Pointers
  <LI><a href="#[5]">UsageFault_Handler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[a]">WWDG_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[37]">__main</a> from entry.o(.ARM.Collect$$$$00000000) referenced from startup_stm32f10x_md.o(.text)
- <LI><a href="#[35]">main</a> from principal uart.o(i.main) referenced from entry9a.o(.ARM.Collect$$$$0000000B)
+ <LI><a href="#[35]">main</a> from principal_uart.o(i.main) referenced from entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
 <P>
 <H3>
@@ -281,6 +281,15 @@ Global Symbols
 <P><STRONG><a name="[23]"></a>TIM1_UP_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_md.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
+<P><STRONG><a name="[26]"></a>TIM2_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_md.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
+</UL>
+<P><STRONG><a name="[27]"></a>TIM3_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_md.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
+</UL>
+<P><STRONG><a name="[28]"></a>TIM4_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_md.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
+</UL>
 <P><STRONG><a name="[30]"></a>USART2_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_md.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
@@ -304,19 +313,20 @@ Global Symbols
 
 <P><STRONG><a name="[4e]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
-<P><STRONG><a name="[38]"></a>Callback</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, principal uart.o(i.Callback))
+<P><STRONG><a name="[38]"></a>Callback</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, principal_uart.o(i.Callback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Callback
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyUART_Receive
 </UL>
-<BR>[Address Reference Count : 1]<UL><LI> principal uart.o(i.main)
+<BR>[Address Reference Count : 1]<UL><LI> principal_uart.o(i.main)
 </UL>
-<P><STRONG><a name="[3e]"></a>MyGPIO_Init</STRONG> (Thumb, 166 bytes, Stack size 4 bytes, mygpio.o(i.MyGPIO_Init))
+<P><STRONG><a name="[3e]"></a>MyGPIO_Init</STRONG> (Thumb, 252 bytes, Stack size 4 bytes, mygpio.o(i.MyGPIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = MyGPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Set
 </UL>
 <BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyUART_Init
+<LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[3f]"></a>MyGPIO_Set</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, mygpio.o(i.MyGPIO_Set))
@@ -332,8 +342,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[43]"></a>MyUART_Init</STRONG> (Thumb, 176 bytes, Stack size 16 bytes, myuart.o(i.MyUART_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = MyUART_Init &rArr; MyGPIO_Init
+<P><STRONG><a name="[43]"></a>MyUART_Init</STRONG> (Thumb, 142 bytes, Stack size 24 bytes, myuart.o(i.MyUART_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = MyUART_Init &rArr; MyGPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Init
 </UL>
@@ -355,21 +365,6 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(.text)
 </UL>
-<P><STRONG><a name="[26]"></a>TIM2_IRQHandler</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, mytimer.o(i.TIM2_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TIM2_IRQHandler
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
-</UL>
-<P><STRONG><a name="[27]"></a>TIM3_IRQHandler</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, mytimer.o(i.TIM3_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TIM3_IRQHandler
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
-</UL>
-<P><STRONG><a name="[28]"></a>TIM4_IRQHandler</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, mytimer.o(i.TIM4_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TIM4_IRQHandler
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
-</UL>
 <P><STRONG><a name="[2f]"></a>USART1_IRQHandler</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, myuart.o(i.USART1_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = USART1_IRQHandler
 </UL>
@@ -386,12 +381,13 @@ Global Symbols
 
 <P><STRONG><a name="[51]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
-<P><STRONG><a name="[35]"></a>main</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, principal uart.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = main &rArr; MyUART_ActiveIT &rArr; __NVIC_SetPriority
+<P><STRONG><a name="[35]"></a>main</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, principal_uart.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = main &rArr; MyUART_Init &rArr; MyGPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyUART_Send
 <LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyUART_Init
 <LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyUART_ActiveIT
+<LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Init
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL><P>
