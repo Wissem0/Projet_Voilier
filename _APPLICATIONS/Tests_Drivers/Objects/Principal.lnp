@@ -1,13 +1,7 @@
 --cpu Cortex-M3
-<<<<<<< Updated upstream
-".\objects\principal_uart.o"
-".\objects\mygpio.o"
-".\objects\myuart.o"
-=======
 ".\objects\principal_pwm.o"
 ".\objects\mygpio.o"
 ".\objects\mytimer.o"
->>>>>>> Stashed changes
 ".\objects\startup_stm32f10x_md.o"
 ".\objects\system_stm32f10x.o"
 --library_type=microlib --ro-base 0x08000000 --entry 0x08000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols

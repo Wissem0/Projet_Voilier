@@ -25,7 +25,7 @@ int main ( void )
 	
 	//PWM
 	MyTimer_PWM(Timer.Timer, 2);
-	MyTimer_PWM_Cycle(Timer.Timer,7, 2);
+	MyTimer_PWM_Cycle(Timer.Timer,5, 2);
 	
 
 

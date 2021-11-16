@@ -21,32 +21,24 @@ void init_girouette (MyTimer_Struct_TypeDef *Timer_encodeur, MyTimer_Struct_Type
 MyGPIO_Struct_TypeDef * GPIO_Girouette_A, MyGPIO_Struct_TypeDef * GPIO_Girouette_B, MyGPIO_Struct_TypeDef * GPIO_Moteur,
 MyTimer_Struct_TypeDef *Timer_interruption){
 	
-	//init + config Timer_encodeur en mode encoder 
+	//config Timer en mode encoder 
 	MyTimer_Base_Init(Timer_encodeur,Timer_encodeur->ARR,Timer_encodeur->PSC);
 	MyTimer_timer_encodeur_init(Timer_encodeur->Timer);
-	MyTimer_Base_Start(Timer_encodeur->Timer);
 
-	//init Timer_moteur
-	MyTimer_Base_Init (Timer_moteur,Timer_moteur->ARR,Timer_moteur->PSC);
-	MyTimer_Base_Start(Timer_moteur->Timer);
-
-	//Init GPIOs encodeur + moteur
+	//Init GPIO
 	MyGPIO_Init(GPIO_Girouette_A);
 	MyGPIO_Init(GPIO_Girouette_B);
-	MyGPIO_Init(GPIO_Moteur);
+
+	MyTimer_Base_Start(Timer_encodeur->Timer);
 
 	//PWM
+	MyTimer_Base_Init (Timer_moteur,Timer_moteur->ARR,Timer_moteur->PSC);
 	MyTimer_PWM(Timer_moteur->Timer,2);
-
+	MyGPIO_Init(GPIO_Moteur);
+	MyTimer_Base_Start(Timer_moteur->Timer);
+	
 	//Interruption
 	MyTimer_Base_Init(Timer_interruption,Timer_interruption->ARR,Timer_interruption->PSC);
-	MyTimer_Base_Start(Timer_interruption->Timer);
 	MyTimer_Active_IT(Timer_interruption->Timer,3,Girouette_recup_angle);
-
-
-	/*while(1){
-	MyTimer_PWM_Cycle(TIM3,(TIM2->CNT/4*10./9.0),2);
-	}
-*/
+	MyTimer_Base_Start(Timer_interruption->Timer);
 }
-
