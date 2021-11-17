@@ -3,7 +3,7 @@
  * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'Girouette _test' 
+ * Project: 'Principal' 
  * Target:  'Target 1' 
  */
 
