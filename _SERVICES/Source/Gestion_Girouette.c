@@ -4,6 +4,7 @@
 
 	//Fonction interruption appelée chaque 20ms pour récupérer l'angle de la Girouette
 	//TIM2 pour Timer encodeur et TIM3 pour Timer moteur
+/*
 void Girouette_recup_angle(void){
 	
 	int angle_alpha=(TIM2->CNT/4.0); //on récupère ce qu'il y a dans CNT
@@ -15,33 +16,44 @@ void Girouette_recup_angle(void){
 	//Position du moteur selon l'angle
 	MyTimer_PWM_Cycle(TIM3,(angle_teta*10./9.0),2);
 	}
-
+*/
 
 void init_girouette (MyTimer_Struct_TypeDef *Timer_encodeur, MyTimer_Struct_TypeDef *Timer_moteur,
 MyGPIO_Struct_TypeDef * GPIO_Girouette_A, MyGPIO_Struct_TypeDef * GPIO_Girouette_B, MyGPIO_Struct_TypeDef * GPIO_Moteur,
 MyTimer_Struct_TypeDef *Timer_interruption){
-	
-	//init + config Timer_encodeur en mode encoder 
+	//config Timer en mode encoder 
 	MyTimer_Base_Init(Timer_encodeur,Timer_encodeur->ARR,Timer_encodeur->PSC);
 	MyTimer_timer_encodeur_init(Timer_encodeur->Timer);
-	MyTimer_Base_Start(Timer_encodeur->Timer);
 
-	//init Timer_moteur
-	MyTimer_Base_Init (Timer_moteur,Timer_moteur->ARR,Timer_moteur->PSC);
-	MyTimer_Base_Start(Timer_moteur->Timer);
-
-	//Init GPIOs encodeur + moteur
+	//Init GPIO
 	MyGPIO_Init(GPIO_Girouette_A);
 	MyGPIO_Init(GPIO_Girouette_B);
-	MyGPIO_Init(GPIO_Moteur);
 
-	//PWM
-	MyTimer_PWM(Timer_moteur->Timer,2);
+	MyTimer_Base_Start(Timer_encodeur->Timer);
 
+
+		// Configuration de la sortie PWM
+		RCC->APB2ENR |= RCC_APB2ENR_IOPAEN;
+		MyGPIO_Init(GPIO_Moteur);
+		MyTimer_Base_Init(Timer_moteur,Timer_moteur->ARR,Timer_moteur->PSC);
+		MyTimer_Base_Start(Timer_moteur->Timer);
+
+	
+		//PWM
+		MyTimer_PWM(Timer_moteur->Timer, 2);
+		MyTimer_PWM_Cycle(Timer_moteur->Timer,5, 2);
+		MyTimer_PWM_Cycle(Timer_moteur->Timer,6, 2);
+
+
+	do{
+	int test = (TIM2->CNT)*(5/1439)+5;
+	MyTimer_PWM_Cycle(Timer_moteur->Timer,test, 2);
+	} while(1);
+	
+/*
 	//Interruption
 	MyTimer_Base_Init(Timer_interruption,Timer_interruption->ARR,Timer_interruption->PSC);
-	MyTimer_Base_Start(Timer_interruption->Timer);
 	MyTimer_Active_IT(Timer_interruption->Timer,3,Girouette_recup_angle);
-
+	MyTimer_Base_Start(Timer_interruption->Timer);
+*/
 }
-
