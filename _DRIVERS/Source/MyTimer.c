@@ -28,8 +28,8 @@ void MyTimer_Active_IT ( TIM_TypeDef * Timer , char Prio, void (*IT_function)(vo
 	Timer -> DIER |= 1;
 	
 	if (Timer == TIM1) {
-		NVIC_EnableIRQ(TIM1_TRG_COM_IRQn);
-		NVIC_SetPriority(TIM1_TRG_COM_IRQn, Prio);
+		NVIC_EnableIRQ(TIM1_UP_IRQn);
+		NVIC_SetPriority(TIM1_UP_IRQn,Prio);
 		IT_function_TIM1 = IT_function ;
 	}
 	if (Timer == TIM2) {
@@ -147,9 +147,6 @@ void MyTimer_timer_encodeur_init(TIM_TypeDef * Timer_encodeur){
 	//CEN=1
 	//Initialisation
 	MyTimer_Base_Start(Timer_encodeur); //fait la même chose
-	Timer_encodeur->ARR=0x59F;
-	Timer_encodeur->PSC=0x0;
-
 
 
 

@@ -3,9 +3,10 @@
 #include "MyGPIO.h"
 #include "GestionGirouette.h"
 
-MyTimer_Struct_TypeDef Timer_Enc = {TIM2,1439,0} ; //ARR et PSC changés dans la fonction MyTimer_timer_encodeur_init
+MyTimer_Struct_TypeDef Timer_Enc = {TIM2,1439,0} ; 
 MyTimer_Struct_TypeDef Timer_moteur = {TIM3,999,1439} ; //20ms
-MyTimer_Struct_TypeDef Timer_IT = {TIM1,1439,99} ; //200ms
+//MyTimer_Struct_TypeDef Timer_IT = {TIM1,4999,4319} ; 
+MyTimer_Struct_TypeDef Timer_IT = {TIM4,1439,99} ; //200ms
 
 MyGPIO_Struct_TypeDef GPIO_Girouette_A = {GPIOA,0,In_Floating}; 
 MyGPIO_Struct_TypeDef GPIO_Girouette_B = {GPIOA,1,In_Floating};

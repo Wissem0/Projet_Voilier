@@ -2,29 +2,40 @@
 #include "MyTimer.h"
 #include "GestionGirouette.h"
 int test;
+float alpha;
+float result;
+float percent;
 float test2;
 
 	//Fonction interruption appelée chaque 20ms pour récupérer l'angle de la Girouette
 	//TIM2 pour Timer encodeur et TIM3 pour Timer moteur
 
 void Girouette_recup_angle(void){
-	/*
-	int angle_alpha=(TIM2->CNT/4.0); //on récupère ce qu'il y a dans CNT
-	int angle_teta = 0;
-	if (angle_alpha>0 || angle_alpha<45) {angle_teta = 0;}
-	if (angle_alpha>45 || angle_alpha<180){
-		angle_teta=(angle_alpha-45)*(90.0/135.0);
-	MyTimer_PWM_Cycle(TIM3,(angle_teta*10./9.0),2);
+	
+	
+	alpha = (TIM2->CNT)/4.;
+	if (alpha<45 && alpha>0){
+}
+	else if (alpha < 45.0 || alpha > 315){
+		percent = 0.0;
 	}
-	*/
+	else if (alpha <= 180){
+		result = (90.0/135.0)*(alpha-45.0);
+	}
+	else
+	{
+		result = (90.0/135.0)*(315-alpha);
+	}
+	percent = (1.0/18.0)*result+5.0;
+	MyTimer_PWM_Cycle(TIM3,percent, 2);
 	/*
 	test = (TIM2->CNT);
 	test2=(float)test*(5.0/1439.0)+5.0;
-	MyTimer_PWM_Cycle(TIM3,test2, 2);
+	MyTimer_PWM_Cycle(TIM3,pourcentage_PWM, 2);
 	*/
-	}
+	
 	//Position du moteur selon l'angle
-
+}
 
 
 void init_girouette (MyTimer_Struct_TypeDef *Timer_encodeur, MyTimer_Struct_TypeDef *Timer_moteur,
@@ -53,19 +64,19 @@ MyTimer_Struct_TypeDef *Timer_interruption){
 		MyTimer_PWM_Cycle(Timer_moteur->Timer,5, 2);
 		MyTimer_PWM_Cycle(Timer_moteur->Timer,6, 2);
 
-	
+	/*
 	do{
 	test = (TIM2->CNT);
 	test2=(float)test*(5.0/1439.0)+5.0;
 	MyTimer_PWM_Cycle(Timer_moteur->Timer,test2, 2);
 	} while(1);
-	
-/*
+	*/
+
 	//Interruption
 	MyTimer_Base_Init(Timer_interruption,Timer_interruption->ARR,Timer_interruption->PSC);
 	MyTimer_Active_IT(Timer_interruption->Timer,3,Girouette_recup_angle);
 	MyTimer_Base_Start(Timer_interruption->Timer);
 	
-*/
+
 	
 }

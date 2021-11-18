@@ -2,6 +2,7 @@
 #include "MyTimer.h"
 #include "MyGPIO.h"
 
+
 MyTimer_Struct_TypeDef Timer = {TIM2   ,999 ,1439} ; //frequence de 100kHz
 //MyGPIO_Struct_TypeDef GPIOA5_Struct = { GPIOA , 5 , Out_Ppull}; //Led
 MyGPIO_Struct_TypeDef GPIOA1_Struct = { GPIOA , 1 , AltOut_Ppull}; //PWM
