@@ -6,7 +6,7 @@
 #include "MyUART.h"
 
 void Gestion_Plateau_Init(MyTimer_Struct_TypeDef * Timer_PWM, MyGPIO_Struct_TypeDef* GPIO_PWM,
-MyGPIO_Struct_TypeDef* GPIO_SENS, USART_TypeDef * UART, void (*IT_function) (void)) ;
+MyGPIO_Struct_TypeDef* GPIO_SENS,MyGPIO_Struct_TypeDef* GPIO_USART_RX, USART_TypeDef * UART, void (*IT_function) (void));
 
 
 #endif

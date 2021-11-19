@@ -9,8 +9,8 @@
 void MyGPIO_Init(MyGPIO_Struct_TypeDef * GPIOStructPtr) {
 	//màj crl si on veut un pull up ou pull down
 	//on reset la conf
-/*
-	if ( GPIOStructPtr->GPIO == GPIOA) RCC->APB2ENR |= RCC_APB2ENR_IOPAEN;
+
+/*	if ( GPIOStructPtr->GPIO == GPIOA) RCC->APB2ENR |= RCC_APB2ENR_IOPAEN;
 	else if ( GPIOStructPtr->GPIO == GPIOB) RCC->APB2ENR |= RCC_APB2ENR_IOPBEN;
 	else if ( GPIOStructPtr->GPIO == GPIOC) RCC->APB2ENR |= RCC_APB2ENR_IOPCEN;
 	else if ( GPIOStructPtr->GPIO == GPIOD) RCC->APB2ENR |= RCC_APB2ENR_IOPDEN;
