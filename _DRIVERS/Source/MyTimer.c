@@ -152,6 +152,3 @@ void MyTimer_timer_encodeur_init(TIM_TypeDef * Timer_encodeur){
 
 }
 
-
-
-// 

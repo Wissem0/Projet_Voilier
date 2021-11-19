@@ -1,8 +1,8 @@
 --cpu Cortex-M3
 ".\objects\voilier_main.o"
-".\objects\mygpio_1.o"
-".\objects\mytimer_1.o"
-".\objects\myuart_1.o"
+".\objects\mygpio.o"
+".\objects\mytimer.o"
+".\objects\myuart.o"
 ".\objects\gestion_girouette.o"
 ".\objects\gestion_plateau.o"
 ".\objects\startup_stm32f10x_md.o"
