@@ -17,7 +17,7 @@ MyGPIO_Struct_TypeDef* GPIO_SENS,MyGPIO_Struct_TypeDef* GPIO_USART_RX, USART_Typ
 	MyGPIO_Init(GPIO_USART_RX);
 	MyUART_Init(UART, 9600);
 	MyUART_ActiveIT(UART, 3 ,IT_function);
-	MyTimer_PWM (Timer_PWM->Timer, 1) ;
+	MyTimer_PWM (Timer_PWM->Timer, 3) ;
 	MyTimer_Base_Start(Timer_PWM->Timer);
 
 }

@@ -4,8 +4,8 @@
 #include "MyTimer.h"
 #include "Gestion_Plateau.h"
 
-MyTimer_Struct_TypeDef Timer_PWM = {TIM4 , 3600 , 1};
-MyGPIO_Struct_TypeDef GPIO_PWM = {GPIOB , 6 , AltOut_Ppull};
+MyTimer_Struct_TypeDef Timer_PWM = {TIM3 , 999 , 1439};
+MyGPIO_Struct_TypeDef GPIO_PWM = {GPIOB , 0 , AltOut_Ppull};
 MyGPIO_Struct_TypeDef GPIO_SENS = {GPIOB,5 , Out_Ppull};
 MyGPIO_Struct_TypeDef GPIO_RX = {GPIOA,10,In_PullDown};
 USART_TypeDef * UART = USART1 ;
@@ -19,10 +19,10 @@ void Update_Vitesse () {
 	valeurf = (float)valeur ;
 	if (valeur>=0) {
 		MyGPIO_Reset (GPIOB, 5) ;
-		MyTimer_PWM_Cycle (TIM4, (valeurf), 1) ;
+		MyTimer_PWM_Cycle (TIM3, (valeurf), 3) ;
 	} else {
 		MyGPIO_Set (GPIOB, 5) ;
-		MyTimer_PWM_Cycle (TIM4, (valeur*(-1)), 1) ;
+		MyTimer_PWM_Cycle (TIM3, (valeur*(-1)), 3) ;
 	}
 	
 }
