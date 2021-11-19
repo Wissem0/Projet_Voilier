@@ -495,11 +495,6 @@
                 </FileArmAds>
               </FileOption>
             </File>
-            <File>
-              <FileName>Voilier_main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Projet_Voilier_main\Source\Voilier_main.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -1084,11 +1079,6 @@
               <FileName>Principal_Test_Plateau.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Source\Principal_Test_Plateau.c</FilePath>
-            </File>
-            <File>
-              <FileName>Voilier_main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Projet_Voilier_main\Source\Voilier_main.c</FilePath>
             </File>
           </Files>
         </Group>

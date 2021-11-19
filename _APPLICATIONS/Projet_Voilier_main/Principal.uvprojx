@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\_DRIVERS</IncludePath>
+              <IncludePath>..\..\_DRIVERS\Include;..\..\_SERVICES\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -384,24 +384,9 @@
           <GroupName>MesSources</GroupName>
           <Files>
             <File>
-              <FileName>MyADC.c</FileName>
+              <FileName>Voilier_main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\_DRIVERS\MyADC.c</FilePath>
-            </File>
-            <File>
-              <FileName>MyGPIO.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\_DRIVERS\MyGPIO.c</FilePath>
-            </File>
-            <File>
-              <FileName>MyTimer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\_DRIVERS\MyTimer.c</FilePath>
-            </File>
-            <File>
-              <FileName>MyUART.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\_DRIVERS\MyUART.c</FilePath>
+              <FilePath>.\Source\Voilier_main.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -409,24 +394,19 @@
           <GroupName>MesDrivers</GroupName>
           <Files>
             <File>
-              <FileName>MyADC.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\_DRIVERS\MyADC.c</FilePath>
-            </File>
-            <File>
               <FileName>MyGPIO.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\_DRIVERS\MyGPIO.c</FilePath>
+              <FilePath>..\..\_DRIVERS\Source\MyGPIO.c</FilePath>
             </File>
             <File>
               <FileName>MyTimer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\_DRIVERS\MyTimer.c</FilePath>
+              <FilePath>..\..\_DRIVERS\Source\MyTimer.c</FilePath>
             </File>
             <File>
               <FileName>MyUART.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\_DRIVERS\MyUART.c</FilePath>
+              <FilePath>..\..\_DRIVERS\Source\MyUART.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -434,14 +414,14 @@
           <GroupName>MesServices</GroupName>
           <Files>
             <File>
-              <FileName>GestionGirouette.c</FileName>
+              <FileName>Gestion_Girouette.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\_SERVICES\GestionGirouette.c</FilePath>
+              <FilePath>..\..\_SERVICES\Source\Gestion_Girouette.c</FilePath>
             </File>
             <File>
-              <FileName>Orientation.c</FileName>
+              <FileName>Gestion_Plateau.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\_SERVICES\Orientation.c</FilePath>
+              <FilePath>..\..\_SERVICES\Source\Gestion_Plateau.c</FilePath>
             </File>
           </Files>
         </Group>
