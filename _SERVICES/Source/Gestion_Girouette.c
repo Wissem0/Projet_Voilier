@@ -1,13 +1,12 @@
 #include "MyGPIO.h"
 #include "MyTimer.h"
 #include "GestionGirouette.h"
-int test;
+
 float alpha;
 float result;
 float percent;
-float test2;
 
-	//Fonction interruption appelée chaque 20ms pour récupérer l'angle de la Girouette
+	//Fonction interruption appelée chaque 200ms pour récupérer l'angle de la Girouette
 	//TIM2 pour Timer encodeur et TIM3 pour Timer moteur
 
 void Girouette_recup_angle(void){
@@ -34,7 +33,6 @@ void Girouette_recup_angle(void){
 	MyTimer_PWM_Cycle(TIM3,pourcentage_PWM, 2);
 	*/
 	
-	//Position du moteur selon l'angle
 }
 
 
