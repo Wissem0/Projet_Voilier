@@ -7,7 +7,7 @@
 //#include <stdlib.h>
 
 float alpha; 
-int teta;
+int theta;
 float result;
 float percent;
 int compteur = 0;
@@ -22,22 +22,22 @@ void Girouette_recup_angle(void){
 	
 	alpha = (TIM2->CNT)/4.;
 	if (alpha<45 && alpha>0){
-		teta = 0;
+		theta = 0;
 	}
 	else if (alpha < 45.0 || alpha > 315){
 		percent = 0.0;
-		teta = 0;
+		theta = 0;
 		
 		
 	}
 	else if (alpha <= 180){
 		result = (90.0/135.0)*(alpha-45.0);
-		teta = (int)((90.0/135.0)*(alpha-45.0));
+		theta = (int)((90.0/135.0)*(alpha-45.0));
 	}
 	else
 	{
 		result = (90.0/135.0)*(315-alpha);
-		teta = (int)((90.0/135.0)*(315-alpha));
+		theta = (int)((90.0/135.0)*(315-alpha));
 	}
 	percent = (1.0/18.0)*result+5.0;
 	MyTimer_PWM_Cycle(TIM3,percent, 2);
@@ -71,7 +71,7 @@ void Girouette_recup_angle(void){
 	}
 	
 	
-	sprintf(str2, "%s%d%s%s","L'angle des voiles: ",teta,allure," \n");
+	sprintf(str2, "%s%d%s%s","L'angle des voiles: ",theta,allure," \n");
 
 
 	if (compteur >= 150) { // 20ms x 150 = 3s => on envoie l'angle et l'allure toutes les 3s.
