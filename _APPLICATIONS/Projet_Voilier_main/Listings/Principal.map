@@ -47,12 +47,12 @@ Section Cross References
     gestion_girouette.o(i.Girouette_recup_angle) refers to dfixi.o(.text) for __aeabi_d2iz
     gestion_girouette.o(i.Girouette_recup_angle) refers to fadd.o(.text) for __aeabi_fsub
     gestion_girouette.o(i.Girouette_recup_angle) refers to mytimer.o(i.MyTimer_PWM_Cycle) for MyTimer_PWM_Cycle
-    gestion_girouette.o(i.Girouette_recup_angle) refers to printf3.o(i.__0sprintf$3) for __2sprintf
     gestion_girouette.o(i.Girouette_recup_angle) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
     gestion_girouette.o(i.Girouette_recup_angle) refers to strcpy.o(.text) for strcpy
-    gestion_girouette.o(i.Girouette_recup_angle) refers to gestion_girouette.o(.data) for alpha
-    gestion_girouette.o(i.Girouette_recup_angle) refers to gestion_girouette.o(.bss) for str1
+    gestion_girouette.o(i.Girouette_recup_angle) refers to printf3.o(i.__0sprintf$3) for __2sprintf
     gestion_girouette.o(i.Girouette_recup_angle) refers to myuart.o(i.MyUART_Send) for MyUART_Send
+    gestion_girouette.o(i.Girouette_recup_angle) refers to gestion_girouette.o(.data) for alpha
+    gestion_girouette.o(i.Girouette_recup_angle) refers to gestion_girouette.o(.bss) for allure
     gestion_girouette.o(i.init_girouette) refers to mytimer.o(i.MyTimer_Base_Init) for MyTimer_Base_Init
     gestion_girouette.o(i.init_girouette) refers to mytimer.o(i.MyTimer_timer_encodeur_init) for MyTimer_timer_encodeur_init
     gestion_girouette.o(i.init_girouette) refers to mygpio.o(i.MyGPIO_Init) for MyGPIO_Init
@@ -518,53 +518,53 @@ Image Symbol Table
     .text                                    0x0800080c   Section       36  init.o(.text)
     i.Gestion_Plateau_Init                   0x08000830   Section        0  gestion_plateau.o(i.Gestion_Plateau_Init)
     i.Girouette_recup_angle                  0x080008a4   Section        0  gestion_girouette.o(i.Girouette_recup_angle)
-    i.MyGPIO_Init                            0x08000dfc   Section        0  mygpio.o(i.MyGPIO_Init)
-    i.MyGPIO_Reset                           0x08000ea2   Section        0  mygpio.o(i.MyGPIO_Reset)
-    i.MyGPIO_Set                             0x08000eae   Section        0  mygpio.o(i.MyGPIO_Set)
-    i.MyTimer_Active_IT                      0x08000eb8   Section        0  mytimer.o(i.MyTimer_Active_IT)
-    i.MyTimer_Base_Init                      0x08000f4c   Section        0  mytimer.o(i.MyTimer_Base_Init)
-    i.MyTimer_PWM                            0x08000fc0   Section        0  mytimer.o(i.MyTimer_PWM)
-    i.MyTimer_PWM_Cycle                      0x08001080   Section        0  mytimer.o(i.MyTimer_PWM_Cycle)
-    i.MyTimer_timer_encodeur_init            0x08001190   Section        0  mytimer.o(i.MyTimer_timer_encodeur_init)
-    i.MyUART_ActiveIT                        0x080011d4   Section        0  myuart.o(i.MyUART_ActiveIT)
-    i.MyUART_Init                            0x08001228   Section        0  myuart.o(i.MyUART_Init)
-    i.MyUART_Receive                         0x080012d4   Section        0  myuart.o(i.MyUART_Receive)
-    i.MyUART_Send                            0x080012dc   Section        0  myuart.o(i.MyUART_Send)
-    i.SetSysClock                            0x080012f8   Section        0  system_stm32f10x.o(i.SetSysClock)
-    SetSysClock                              0x080012f9   Thumb Code     8  system_stm32f10x.o(i.SetSysClock)
-    i.SetSysClockTo72                        0x08001300   Section        0  system_stm32f10x.o(i.SetSysClockTo72)
-    SetSysClockTo72                          0x08001301   Thumb Code   214  system_stm32f10x.o(i.SetSysClockTo72)
-    i.SystemInit                             0x080013e0   Section        0  system_stm32f10x.o(i.SystemInit)
-    i.TIM2_IRQHandler                        0x08001440   Section        0  mytimer.o(i.TIM2_IRQHandler)
-    i.TIM3_IRQHandler                        0x08001460   Section        0  mytimer.o(i.TIM3_IRQHandler)
-    i.TIM4_IRQHandler                        0x08001480   Section        0  mytimer.o(i.TIM4_IRQHandler)
-    i.USART1_IRQHandler                      0x080014a0   Section        0  myuart.o(i.USART1_IRQHandler)
-    i.USART3_IRQHandler                      0x080014b4   Section        0  myuart.o(i.USART3_IRQHandler)
-    i.Update_Vitesse                         0x080014c8   Section        0  voilier_main.o(i.Update_Vitesse)
-    i.__0sprintf$3                           0x0800153c   Section        0  printf3.o(i.__0sprintf$3)
-    i.__NVIC_EnableIRQ                       0x08001564   Section        0  mytimer.o(i.__NVIC_EnableIRQ)
-    __NVIC_EnableIRQ                         0x08001565   Thumb Code    34  mytimer.o(i.__NVIC_EnableIRQ)
-    i.__NVIC_EnableIRQ                       0x08001586   Section        0  myuart.o(i.__NVIC_EnableIRQ)
-    __NVIC_EnableIRQ                         0x08001587   Thumb Code    34  myuart.o(i.__NVIC_EnableIRQ)
-    i.__NVIC_SetPriority                     0x080015a8   Section        0  mytimer.o(i.__NVIC_SetPriority)
-    __NVIC_SetPriority                       0x080015a9   Thumb Code    32  mytimer.o(i.__NVIC_SetPriority)
-    i.__NVIC_SetPriority                     0x080015d0   Section        0  myuart.o(i.__NVIC_SetPriority)
-    __NVIC_SetPriority                       0x080015d1   Thumb Code    32  myuart.o(i.__NVIC_SetPriority)
-    i.__scatterload_copy                     0x080015f8   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x08001606   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x08001608   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i._printf_core                           0x08001618   Section        0  printf3.o(i._printf_core)
-    _printf_core                             0x08001619   Thumb Code   436  printf3.o(i._printf_core)
-    i._sputc                                 0x080017d0   Section        0  printf3.o(i._sputc)
-    _sputc                                   0x080017d1   Thumb Code    10  printf3.o(i._sputc)
-    i.init_girouette                         0x080017dc   Section        0  gestion_girouette.o(i.init_girouette)
-    i.main                                   0x0800188c   Section        0  voilier_main.o(i.main)
+    i.MyGPIO_Init                            0x08000dc0   Section        0  mygpio.o(i.MyGPIO_Init)
+    i.MyGPIO_Reset                           0x08000e66   Section        0  mygpio.o(i.MyGPIO_Reset)
+    i.MyGPIO_Set                             0x08000e72   Section        0  mygpio.o(i.MyGPIO_Set)
+    i.MyTimer_Active_IT                      0x08000e7c   Section        0  mytimer.o(i.MyTimer_Active_IT)
+    i.MyTimer_Base_Init                      0x08000f10   Section        0  mytimer.o(i.MyTimer_Base_Init)
+    i.MyTimer_PWM                            0x08000f84   Section        0  mytimer.o(i.MyTimer_PWM)
+    i.MyTimer_PWM_Cycle                      0x08001044   Section        0  mytimer.o(i.MyTimer_PWM_Cycle)
+    i.MyTimer_timer_encodeur_init            0x08001154   Section        0  mytimer.o(i.MyTimer_timer_encodeur_init)
+    i.MyUART_ActiveIT                        0x08001198   Section        0  myuart.o(i.MyUART_ActiveIT)
+    i.MyUART_Init                            0x080011ec   Section        0  myuart.o(i.MyUART_Init)
+    i.MyUART_Receive                         0x08001298   Section        0  myuart.o(i.MyUART_Receive)
+    i.MyUART_Send                            0x080012a0   Section        0  myuart.o(i.MyUART_Send)
+    i.SetSysClock                            0x080012bc   Section        0  system_stm32f10x.o(i.SetSysClock)
+    SetSysClock                              0x080012bd   Thumb Code     8  system_stm32f10x.o(i.SetSysClock)
+    i.SetSysClockTo72                        0x080012c4   Section        0  system_stm32f10x.o(i.SetSysClockTo72)
+    SetSysClockTo72                          0x080012c5   Thumb Code   214  system_stm32f10x.o(i.SetSysClockTo72)
+    i.SystemInit                             0x080013a4   Section        0  system_stm32f10x.o(i.SystemInit)
+    i.TIM2_IRQHandler                        0x08001404   Section        0  mytimer.o(i.TIM2_IRQHandler)
+    i.TIM3_IRQHandler                        0x08001424   Section        0  mytimer.o(i.TIM3_IRQHandler)
+    i.TIM4_IRQHandler                        0x08001444   Section        0  mytimer.o(i.TIM4_IRQHandler)
+    i.USART1_IRQHandler                      0x08001464   Section        0  myuart.o(i.USART1_IRQHandler)
+    i.USART3_IRQHandler                      0x08001478   Section        0  myuart.o(i.USART3_IRQHandler)
+    i.Update_Vitesse                         0x0800148c   Section        0  voilier_main.o(i.Update_Vitesse)
+    i.__0sprintf$3                           0x08001500   Section        0  printf3.o(i.__0sprintf$3)
+    i.__NVIC_EnableIRQ                       0x08001528   Section        0  mytimer.o(i.__NVIC_EnableIRQ)
+    __NVIC_EnableIRQ                         0x08001529   Thumb Code    34  mytimer.o(i.__NVIC_EnableIRQ)
+    i.__NVIC_EnableIRQ                       0x0800154a   Section        0  myuart.o(i.__NVIC_EnableIRQ)
+    __NVIC_EnableIRQ                         0x0800154b   Thumb Code    34  myuart.o(i.__NVIC_EnableIRQ)
+    i.__NVIC_SetPriority                     0x0800156c   Section        0  mytimer.o(i.__NVIC_SetPriority)
+    __NVIC_SetPriority                       0x0800156d   Thumb Code    32  mytimer.o(i.__NVIC_SetPriority)
+    i.__NVIC_SetPriority                     0x08001594   Section        0  myuart.o(i.__NVIC_SetPriority)
+    __NVIC_SetPriority                       0x08001595   Thumb Code    32  myuart.o(i.__NVIC_SetPriority)
+    i.__scatterload_copy                     0x080015bc   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x080015ca   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x080015cc   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i._printf_core                           0x080015dc   Section        0  printf3.o(i._printf_core)
+    _printf_core                             0x080015dd   Thumb Code   436  printf3.o(i._printf_core)
+    i._sputc                                 0x08001794   Section        0  printf3.o(i._sputc)
+    _sputc                                   0x08001795   Thumb Code    10  printf3.o(i._sputc)
+    i.init_girouette                         0x080017a0   Section        0  gestion_girouette.o(i.init_girouette)
+    i.main                                   0x08001850   Section        0  voilier_main.o(i.main)
     .data                                    0x20000000   Section       84  voilier_main.o(.data)
     .data                                    0x20000054   Section       16  mytimer.o(.data)
     .data                                    0x20000064   Section        8  myuart.o(.data)
     .data                                    0x2000006c   Section       20  gestion_girouette.o(.data)
-    .bss                                     0x20000080   Section       62  gestion_girouette.o(.bss)
-    STACK                                    0x200000c0   Section     1024  startup_stm32f10x_md.o(STACK)
+    .bss                                     0x20000080   Section       50  gestion_girouette.o(.bss)
+    STACK                                    0x200000b8   Section     1024  startup_stm32f10x_md.o(STACK)
 
     Global Symbols
 
@@ -717,36 +717,36 @@ Image Symbol Table
     __scatterload                            0x0800080d   Thumb Code    28  init.o(.text)
     __scatterload_rt2                        0x0800080d   Thumb Code     0  init.o(.text)
     Gestion_Plateau_Init                     0x08000831   Thumb Code   112  gestion_plateau.o(i.Gestion_Plateau_Init)
-    Girouette_recup_angle                    0x080008a5   Thumb Code  1368  gestion_girouette.o(i.Girouette_recup_angle)
-    MyGPIO_Init                              0x08000dfd   Thumb Code   166  mygpio.o(i.MyGPIO_Init)
-    MyGPIO_Reset                             0x08000ea3   Thumb Code    12  mygpio.o(i.MyGPIO_Reset)
-    MyGPIO_Set                               0x08000eaf   Thumb Code     8  mygpio.o(i.MyGPIO_Set)
-    MyTimer_Active_IT                        0x08000eb9   Thumb Code   118  mytimer.o(i.MyTimer_Active_IT)
-    MyTimer_Base_Init                        0x08000f4d   Thumb Code    98  mytimer.o(i.MyTimer_Base_Init)
-    MyTimer_PWM                              0x08000fc1   Thumb Code   188  mytimer.o(i.MyTimer_PWM)
-    MyTimer_PWM_Cycle                        0x08001081   Thumb Code   266  mytimer.o(i.MyTimer_PWM_Cycle)
-    MyTimer_timer_encodeur_init              0x08001191   Thumb Code    66  mytimer.o(i.MyTimer_timer_encodeur_init)
-    MyUART_ActiveIT                          0x080011d5   Thumb Code    68  myuart.o(i.MyUART_ActiveIT)
-    MyUART_Init                              0x08001229   Thumb Code   142  myuart.o(i.MyUART_Init)
-    MyUART_Receive                           0x080012d5   Thumb Code     8  myuart.o(i.MyUART_Receive)
-    MyUART_Send                              0x080012dd   Thumb Code    28  myuart.o(i.MyUART_Send)
-    SystemInit                               0x080013e1   Thumb Code    78  system_stm32f10x.o(i.SystemInit)
-    TIM2_IRQHandler                          0x08001441   Thumb Code    26  mytimer.o(i.TIM2_IRQHandler)
-    TIM3_IRQHandler                          0x08001461   Thumb Code    22  mytimer.o(i.TIM3_IRQHandler)
-    TIM4_IRQHandler                          0x08001481   Thumb Code    22  mytimer.o(i.TIM4_IRQHandler)
-    USART1_IRQHandler                        0x080014a1   Thumb Code    16  myuart.o(i.USART1_IRQHandler)
-    USART3_IRQHandler                        0x080014b5   Thumb Code    16  myuart.o(i.USART3_IRQHandler)
-    Update_Vitesse                           0x080014c9   Thumb Code    96  voilier_main.o(i.Update_Vitesse)
-    __0sprintf$3                             0x0800153d   Thumb Code    34  printf3.o(i.__0sprintf$3)
-    __1sprintf$3                             0x0800153d   Thumb Code     0  printf3.o(i.__0sprintf$3)
-    __2sprintf                               0x0800153d   Thumb Code     0  printf3.o(i.__0sprintf$3)
-    __scatterload_copy                       0x080015f9   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x08001607   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x08001609   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    init_girouette                           0x080017dd   Thumb Code   160  gestion_girouette.o(i.init_girouette)
-    main                                     0x0800188d   Thumb Code    48  voilier_main.o(i.main)
-    Region$$Table$$Base                      0x080018e8   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08001908   Number         0  anon$$obj.o(Region$$Table)
+    Girouette_recup_angle                    0x080008a5   Thumb Code  1308  gestion_girouette.o(i.Girouette_recup_angle)
+    MyGPIO_Init                              0x08000dc1   Thumb Code   166  mygpio.o(i.MyGPIO_Init)
+    MyGPIO_Reset                             0x08000e67   Thumb Code    12  mygpio.o(i.MyGPIO_Reset)
+    MyGPIO_Set                               0x08000e73   Thumb Code     8  mygpio.o(i.MyGPIO_Set)
+    MyTimer_Active_IT                        0x08000e7d   Thumb Code   118  mytimer.o(i.MyTimer_Active_IT)
+    MyTimer_Base_Init                        0x08000f11   Thumb Code    98  mytimer.o(i.MyTimer_Base_Init)
+    MyTimer_PWM                              0x08000f85   Thumb Code   188  mytimer.o(i.MyTimer_PWM)
+    MyTimer_PWM_Cycle                        0x08001045   Thumb Code   266  mytimer.o(i.MyTimer_PWM_Cycle)
+    MyTimer_timer_encodeur_init              0x08001155   Thumb Code    66  mytimer.o(i.MyTimer_timer_encodeur_init)
+    MyUART_ActiveIT                          0x08001199   Thumb Code    68  myuart.o(i.MyUART_ActiveIT)
+    MyUART_Init                              0x080011ed   Thumb Code   142  myuart.o(i.MyUART_Init)
+    MyUART_Receive                           0x08001299   Thumb Code     8  myuart.o(i.MyUART_Receive)
+    MyUART_Send                              0x080012a1   Thumb Code    28  myuart.o(i.MyUART_Send)
+    SystemInit                               0x080013a5   Thumb Code    78  system_stm32f10x.o(i.SystemInit)
+    TIM2_IRQHandler                          0x08001405   Thumb Code    26  mytimer.o(i.TIM2_IRQHandler)
+    TIM3_IRQHandler                          0x08001425   Thumb Code    22  mytimer.o(i.TIM3_IRQHandler)
+    TIM4_IRQHandler                          0x08001445   Thumb Code    22  mytimer.o(i.TIM4_IRQHandler)
+    USART1_IRQHandler                        0x08001465   Thumb Code    16  myuart.o(i.USART1_IRQHandler)
+    USART3_IRQHandler                        0x08001479   Thumb Code    16  myuart.o(i.USART3_IRQHandler)
+    Update_Vitesse                           0x0800148d   Thumb Code    96  voilier_main.o(i.Update_Vitesse)
+    __0sprintf$3                             0x08001501   Thumb Code    34  printf3.o(i.__0sprintf$3)
+    __1sprintf$3                             0x08001501   Thumb Code     0  printf3.o(i.__0sprintf$3)
+    __2sprintf                               0x08001501   Thumb Code     0  printf3.o(i.__0sprintf$3)
+    __scatterload_copy                       0x080015bd   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x080015cb   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x080015cd   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    init_girouette                           0x080017a1   Thumb Code   160  gestion_girouette.o(i.init_girouette)
+    main                                     0x08001851   Thumb Code    48  voilier_main.o(i.main)
+    Region$$Table$$Base                      0x080018ac   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x080018cc   Number         0  anon$$obj.o(Region$$Table)
     Timer_Enc                                0x20000000   Data           8  voilier_main.o(.data)
     Timer_moteur                             0x20000008   Data           8  voilier_main.o(.data)
     Timer_IT                                 0x20000010   Data           8  voilier_main.o(.data)
@@ -770,10 +770,9 @@ Image Symbol Table
     result                                   0x20000074   Data           4  gestion_girouette.o(.data)
     percent                                  0x20000078   Data           4  gestion_girouette.o(.data)
     compteur                                 0x2000007c   Data           4  gestion_girouette.o(.data)
-    str1                                     0x20000080   Data          12  gestion_girouette.o(.bss)
-    str2                                     0x2000008c   Data          25  gestion_girouette.o(.bss)
-    allure                                   0x200000a5   Data          25  gestion_girouette.o(.bss)
-    __initial_sp                             0x200004c0   Data           0  startup_stm32f10x_md.o(STACK)
+    allure                                   0x20000080   Data          25  gestion_girouette.o(.bss)
+    str2                                     0x20000099   Data          25  gestion_girouette.o(.bss)
+    __initial_sp                             0x200004b8   Data           0  startup_stm32f10x_md.o(STACK)
 
 
 
@@ -783,9 +782,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000105
 
-  Load Region LR_1 (Base: 0x08000000, Size: 0x00001988, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x08000000, Size: 0x0000194c, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00001908, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000018cc, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -826,64 +825,64 @@ Memory Map of the image
     0x0800080a   0x0800080a   0x00000002   PAD
     0x0800080c   0x0800080c   0x00000024   Code   RO          730    .text               mc_w.l(init.o)
     0x08000830   0x08000830   0x00000074   Code   RO          326    i.Gestion_Plateau_Init  gestion_plateau.o
-    0x080008a4   0x080008a4   0x00000558   Code   RO          285    i.Girouette_recup_angle  gestion_girouette.o
-    0x08000dfc   0x08000dfc   0x000000a6   Code   RO           81    i.MyGPIO_Init       mygpio.o
-    0x08000ea2   0x08000ea2   0x0000000c   Code   RO           83    i.MyGPIO_Reset      mygpio.o
-    0x08000eae   0x08000eae   0x00000008   Code   RO           84    i.MyGPIO_Set        mygpio.o
-    0x08000eb6   0x08000eb6   0x00000002   PAD
-    0x08000eb8   0x08000eb8   0x00000094   Code   RO          129    i.MyTimer_Active_IT  mytimer.o
-    0x08000f4c   0x08000f4c   0x00000074   Code   RO          130    i.MyTimer_Base_Init  mytimer.o
-    0x08000fc0   0x08000fc0   0x000000c0   Code   RO          131    i.MyTimer_PWM       mytimer.o
-    0x08001080   0x08001080   0x00000110   Code   RO          132    i.MyTimer_PWM_Cycle  mytimer.o
-    0x08001190   0x08001190   0x00000042   Code   RO          133    i.MyTimer_timer_encodeur_init  mytimer.o
-    0x080011d2   0x080011d2   0x00000002   PAD
-    0x080011d4   0x080011d4   0x00000054   Code   RO          218    i.MyUART_ActiveIT   myuart.o
-    0x08001228   0x08001228   0x000000ac   Code   RO          219    i.MyUART_Init       myuart.o
-    0x080012d4   0x080012d4   0x00000008   Code   RO          220    i.MyUART_Receive    myuart.o
-    0x080012dc   0x080012dc   0x0000001c   Code   RO          221    i.MyUART_Send       myuart.o
-    0x080012f8   0x080012f8   0x00000008   Code   RO          357    i.SetSysClock       system_stm32f10x.o
-    0x08001300   0x08001300   0x000000e0   Code   RO          358    i.SetSysClockTo72   system_stm32f10x.o
-    0x080013e0   0x080013e0   0x00000060   Code   RO          360    i.SystemInit        system_stm32f10x.o
-    0x08001440   0x08001440   0x00000020   Code   RO          135    i.TIM2_IRQHandler   mytimer.o
-    0x08001460   0x08001460   0x00000020   Code   RO          136    i.TIM3_IRQHandler   mytimer.o
-    0x08001480   0x08001480   0x00000020   Code   RO          137    i.TIM4_IRQHandler   mytimer.o
-    0x080014a0   0x080014a0   0x00000014   Code   RO          222    i.USART1_IRQHandler  myuart.o
-    0x080014b4   0x080014b4   0x00000014   Code   RO          223    i.USART3_IRQHandler  myuart.o
-    0x080014c8   0x080014c8   0x00000074   Code   RO            4    i.Update_Vitesse    voilier_main.o
-    0x0800153c   0x0800153c   0x00000028   Code   RO          496    i.__0sprintf$3      mc_w.l(printf3.o)
-    0x08001564   0x08001564   0x00000022   Code   RO          138    i.__NVIC_EnableIRQ  mytimer.o
-    0x08001586   0x08001586   0x00000022   Code   RO          224    i.__NVIC_EnableIRQ  myuart.o
-    0x080015a8   0x080015a8   0x00000028   Code   RO          139    i.__NVIC_SetPriority  mytimer.o
-    0x080015d0   0x080015d0   0x00000028   Code   RO          225    i.__NVIC_SetPriority  myuart.o
-    0x080015f8   0x080015f8   0x0000000e   Code   RO          736    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08001606   0x08001606   0x00000002   Code   RO          737    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08001608   0x08001608   0x0000000e   Code   RO          738    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x08001616   0x08001616   0x00000002   PAD
-    0x08001618   0x08001618   0x000001b8   Code   RO          501    i._printf_core      mc_w.l(printf3.o)
-    0x080017d0   0x080017d0   0x0000000a   Code   RO          503    i._sputc            mc_w.l(printf3.o)
-    0x080017da   0x080017da   0x00000002   PAD
-    0x080017dc   0x080017dc   0x000000b0   Code   RO          286    i.init_girouette    gestion_girouette.o
-    0x0800188c   0x0800188c   0x0000005c   Code   RO            5    i.main              voilier_main.o
-    0x080018e8   0x080018e8   0x00000020   Data   RO          734    Region$$Table       anon$$obj.o
+    0x080008a4   0x080008a4   0x0000051c   Code   RO          285    i.Girouette_recup_angle  gestion_girouette.o
+    0x08000dc0   0x08000dc0   0x000000a6   Code   RO           81    i.MyGPIO_Init       mygpio.o
+    0x08000e66   0x08000e66   0x0000000c   Code   RO           83    i.MyGPIO_Reset      mygpio.o
+    0x08000e72   0x08000e72   0x00000008   Code   RO           84    i.MyGPIO_Set        mygpio.o
+    0x08000e7a   0x08000e7a   0x00000002   PAD
+    0x08000e7c   0x08000e7c   0x00000094   Code   RO          129    i.MyTimer_Active_IT  mytimer.o
+    0x08000f10   0x08000f10   0x00000074   Code   RO          130    i.MyTimer_Base_Init  mytimer.o
+    0x08000f84   0x08000f84   0x000000c0   Code   RO          131    i.MyTimer_PWM       mytimer.o
+    0x08001044   0x08001044   0x00000110   Code   RO          132    i.MyTimer_PWM_Cycle  mytimer.o
+    0x08001154   0x08001154   0x00000042   Code   RO          133    i.MyTimer_timer_encodeur_init  mytimer.o
+    0x08001196   0x08001196   0x00000002   PAD
+    0x08001198   0x08001198   0x00000054   Code   RO          218    i.MyUART_ActiveIT   myuart.o
+    0x080011ec   0x080011ec   0x000000ac   Code   RO          219    i.MyUART_Init       myuart.o
+    0x08001298   0x08001298   0x00000008   Code   RO          220    i.MyUART_Receive    myuart.o
+    0x080012a0   0x080012a0   0x0000001c   Code   RO          221    i.MyUART_Send       myuart.o
+    0x080012bc   0x080012bc   0x00000008   Code   RO          357    i.SetSysClock       system_stm32f10x.o
+    0x080012c4   0x080012c4   0x000000e0   Code   RO          358    i.SetSysClockTo72   system_stm32f10x.o
+    0x080013a4   0x080013a4   0x00000060   Code   RO          360    i.SystemInit        system_stm32f10x.o
+    0x08001404   0x08001404   0x00000020   Code   RO          135    i.TIM2_IRQHandler   mytimer.o
+    0x08001424   0x08001424   0x00000020   Code   RO          136    i.TIM3_IRQHandler   mytimer.o
+    0x08001444   0x08001444   0x00000020   Code   RO          137    i.TIM4_IRQHandler   mytimer.o
+    0x08001464   0x08001464   0x00000014   Code   RO          222    i.USART1_IRQHandler  myuart.o
+    0x08001478   0x08001478   0x00000014   Code   RO          223    i.USART3_IRQHandler  myuart.o
+    0x0800148c   0x0800148c   0x00000074   Code   RO            4    i.Update_Vitesse    voilier_main.o
+    0x08001500   0x08001500   0x00000028   Code   RO          496    i.__0sprintf$3      mc_w.l(printf3.o)
+    0x08001528   0x08001528   0x00000022   Code   RO          138    i.__NVIC_EnableIRQ  mytimer.o
+    0x0800154a   0x0800154a   0x00000022   Code   RO          224    i.__NVIC_EnableIRQ  myuart.o
+    0x0800156c   0x0800156c   0x00000028   Code   RO          139    i.__NVIC_SetPriority  mytimer.o
+    0x08001594   0x08001594   0x00000028   Code   RO          225    i.__NVIC_SetPriority  myuart.o
+    0x080015bc   0x080015bc   0x0000000e   Code   RO          736    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x080015ca   0x080015ca   0x00000002   Code   RO          737    i.__scatterload_null  mc_w.l(handlers.o)
+    0x080015cc   0x080015cc   0x0000000e   Code   RO          738    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x080015da   0x080015da   0x00000002   PAD
+    0x080015dc   0x080015dc   0x000001b8   Code   RO          501    i._printf_core      mc_w.l(printf3.o)
+    0x08001794   0x08001794   0x0000000a   Code   RO          503    i._sputc            mc_w.l(printf3.o)
+    0x0800179e   0x0800179e   0x00000002   PAD
+    0x080017a0   0x080017a0   0x000000b0   Code   RO          286    i.init_girouette    gestion_girouette.o
+    0x08001850   0x08001850   0x0000005c   Code   RO            5    i.main              voilier_main.o
+    0x080018ac   0x080018ac   0x00000020   Data   RO          734    Region$$Table       anon$$obj.o
 
 
-    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x08001908, Size: 0x00000080, Max: 0xffffffff, ABSOLUTE)
-
-    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
-
-    0x20000000   0x08001908   0x00000054   Data   RW            6    .data               voilier_main.o
-    0x20000054   0x0800195c   0x00000010   Data   RW          140    .data               mytimer.o
-    0x20000064   0x0800196c   0x00000008   Data   RW          226    .data               myuart.o
-    0x2000006c   0x08001974   0x00000014   Data   RW          288    .data               gestion_girouette.o
-
-
-    Execution Region ER_ZI (Exec base: 0x20000080, Load base: 0x08001988, Size: 0x00000440, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x080018cc, Size: 0x00000080, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000080        -       0x0000003e   Zero   RW          287    .bss                gestion_girouette.o
-    0x200000be   0x08001988   0x00000002   PAD
-    0x200000c0        -       0x00000400   Zero   RW          347    STACK               startup_stm32f10x_md.o
+    0x20000000   0x080018cc   0x00000054   Data   RW            6    .data               voilier_main.o
+    0x20000054   0x08001920   0x00000010   Data   RW          140    .data               mytimer.o
+    0x20000064   0x08001930   0x00000008   Data   RW          226    .data               myuart.o
+    0x2000006c   0x08001938   0x00000014   Data   RW          288    .data               gestion_girouette.o
+
+
+    Execution Region ER_ZI (Exec base: 0x20000080, Load base: 0x0800194c, Size: 0x00000438, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000080        -       0x00000032   Zero   RW          287    .bss                gestion_girouette.o
+    0x200000b2   0x0800194c   0x00000006   PAD
+    0x200000b8        -       0x00000400   Zero   RW          347    STACK               startup_stm32f10x_md.o
 
 
 ==============================================================================
@@ -893,8 +892,7 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-<<<<<<< HEAD
-      1544        344          0         20         62       2955   gestion_girouette.o
+      1484        306          0         20         50       2926   gestion_girouette.o
        116          4          0          0          0       1475   gestion_plateau.o
        186          0          0          0          0       2158   mygpio.o
        964         92          0         16          0       7252   mytimer.o
@@ -904,22 +902,9 @@ Image component sizes
        208         64          0         84          0     210035   voilier_main.o
 
     ----------------------------------------------------------------------
-      3792        602        268        128       1088     232643   Object Totals
-=======
-       472         68          0         12          0       2296   gestion_girouette.o
-       116          4          0          0          0       1419   gestion_plateau.o
-       186          0          0          0          0       2046   mygpio.o
-       964         92          0         16          0       6920   mytimer.o
-       378         62          0          8          0       4773   myuart.o
-        36          8        236          0       1024        852   startup_stm32f10x_md.o
-       328         28          0          0          0       2161   system_stm32f10x.o
-       208         64          0         84          0     209875   voilier_main.o
-
-    ----------------------------------------------------------------------
-      2692        326        268        120       1024     230342   Object Totals
->>>>>>> ba8de205f83e8c94abd9f4a81318105350897ca9
+      3732        564        268        128       1080     232614   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-         4          0          0          0          2          0   (incl. Padding)
+         4          0          0          0          6          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -981,21 +966,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-<<<<<<< HEAD
-      6140        628        268        128       1088     232467   Grand Totals
-      6140        628        268        128       1088     232467   ELF Image Totals
-      6140        628        268        128          0          0   ROM Totals
-=======
-      4440        342        268        120       1024     230062   Grand Totals
-      4440        342        268        120       1024     230062   ELF Image Totals
-      4440        342        268        120          0          0   ROM Totals
->>>>>>> ba8de205f83e8c94abd9f4a81318105350897ca9
+      6080        590        268        128       1080     232438   Grand Totals
+      6080        590        268        128       1080     232438   ELF Image Totals
+      6080        590        268        128          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 6408 (   6.26kB)
-    Total RW  Size (RW Data + ZI Data)              1216 (   1.19kB)
-    Total ROM Size (Code + RO Data + RW Data)       6536 (   6.38kB)
+    Total RO  Size (Code + RO Data)                 6348 (   6.20kB)
+    Total RW  Size (RW Data + ZI Data)              1208 (   1.18kB)
+    Total ROM Size (Code + RO Data + RW Data)       6476 (   6.32kB)
 
 ==============================================================================
 

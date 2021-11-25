@@ -3,7 +3,6 @@
 #include "stm32f10x.h"
 
 //Initialisation
-<<<<<<< HEAD
 void MySPI_Config(SPI_TypeDef *SPI) ;
 
 //SPI Transmit
@@ -34,16 +33,3 @@ char MySPI_Read (SPI_TypeDef *SPI);*/
 
 
 #endif 
-=======
-void MySPI_Init (SPI_TypeDef *SPI) ;
-void MySPI_ActiveIT(SPI_TypeDef * SPI, void (*IT_function) (void));
-
-//Ecriture 
-void MySPI_Write (SPI_TypeDef *SPI, char a) ;
-
-//Lecture
-char MySPI_Read (SPI_TypeDef *SPI);
-
-//char MySPI_ReadWrite(SPI_TypeDef * SPI, char data) ;
-#endif 
->>>>>>> ba8de205f83e8c94abd9f4a81318105350897ca9
