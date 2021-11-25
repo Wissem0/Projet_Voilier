@@ -449,6 +449,11 @@
               <FileType>1</FileType>
               <FilePath>..\Tests_Drivers\Source\Principal_PWM.c</FilePath>
             </File>
+            <File>
+              <FileName>Principal_PWM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Tests_Drivers\Source\Principal_PWM.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
