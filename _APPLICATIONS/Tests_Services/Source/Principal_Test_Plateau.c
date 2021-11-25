@@ -22,7 +22,7 @@ void Update_Vitesse () {
 		MyTimer_PWM_Cycle (TIM3, (valeurf), 3) ;
 	} else {
 		MyGPIO_Set (GPIOB, 5) ;
-		MyTimer_PWM_Cycle (TIM3, (valeur*(-1)), 3) ;
+		MyTimer_PWM_Cycle (TIM3, (valeurf*(-1)), 3) ;
 	}
 	
 }
